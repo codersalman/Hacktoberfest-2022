@@ -81,6 +81,13 @@ If you get this message __'This branch is ___ commits behind codersalman:main.',
 git pull origin branch-name
 ```
 
+
+### Contributers
+
+<a href="https://github.com/codersalman/Hacktoberfest-2022/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=codersalman/Hacktoberfest-2022" />
+</a>
+
 ### Contributing :  
 
 You can choose directory of your preferred tech stack  and follow the contributing rules - make folder / proper file name and proper extension.
