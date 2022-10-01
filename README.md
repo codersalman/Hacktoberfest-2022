@@ -7,20 +7,13 @@
 
 This is a repository for anyone wishing to contribute to HacktoberFest 2022
 
-    
-    🥇 Flutter (Android/Web) Templates / Components
-    
-    🥈 Any Amazing piece of code in Python🐍 : 
-            (Decorators/packages/Amazing snippets realted to Machine Learning/ Data Science/Backend)
-            (Neural Networks Archs-codes/Demonstration guide of new packages are heartly welcome !)
-    
-    🥇 React UI Components , NodeJS Magic Snippets 
-    
-    🥈 User Interfaces built on top of HTML, CSS , JS , Bootstrap standalone
-    
-    🥉 Arduino/Verilog/VHDL Magic scripts 
-       
+## This Repo is for an OPEN SOURCE PROJECT  [30Daysofcodes.com](https://30daysofcodes.com/)
 
+
+
+
+
+<hr>
 ### Read [CONTRIBUTING.md](./CONTRIBUTING.md) for more about contributing using GITHUB website
 Celebrate [Hacktoberfest](https://hacktoberfest.digitalocean.com/) by getting involved in the open source community by completing `4 quality PRs` in this project.
 
