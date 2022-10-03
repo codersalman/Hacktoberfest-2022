@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: inter;
+  font-weight: normal;
+  background: #F2D388;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 35px;
+}
+
+p {
+  text-align: center;
+  margin: 15px auto 0px auto;
+  font-size: 16px;
+  width: 80%;
+}
+.contact-form {
+  margin: 35px auto 0px auto;
+  width: 80%;
+}
+
+.contact-form label {
+  font-size: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.contact-form input {
+  padding: 12px 20px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: rgb(255, 255, 255);
+  font-size: 18px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.contact-form input:focus {
+  border-bottom: 2px solid #1a883f;
+}
+
+.contact-form textarea {
+  padding: 12px 20px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background: rgb(255, 255, 255);
+  font-size: 18px;
+  border-radius: 3px;
+  width: 100%;
+  font-family: inter;
+  font-weight: normal;
+}
+
+.contact-form textarea:focus {
+  border-bottom: 2px solid #1a883f;
+}
+
+.contact-form button {
+  font-size: 19px;
+  width: 100%;
+  margin-top: 25px;
+  border: none;
+  padding: 12px 20px;
+  background-color: #22b352;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  border-bottom: 3px solid #1a883f;
+}
+
+.contact-form button:hover {
+  background-color: #1a883f;
+  border-bottom: 3px solid #22b352;
+}
+
+@media all and (min-width: 1000px) {
+  .contact-form {
+    width: 40%;
+  }
+}
+
+@media all and (min-width: 1080px) {
+  .contact-form {
+    width: 30%;
+  }
+}
+
+
+.infosResults div p {
+  width: 50%;
+  margin: 30px auto;
+  background-color: #A7D2CB;
+  padding: 20px;
+  
+  line-height: 2rem;;
+  border-bottom: 3px solid #874C62;
+  font-size: 1.3rem;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Registration Template</title>
+    
+  </head>
+  <body>
+    <h1>Register here</h1>
+    <p>Please fill in this form to create an account.</p>
+    <form class="contact-form">
+      <label for="">First-Name</label><br />
+      <input class="fname" type="text" oninput="this.value = this.value.toUpperCase()" placeholder="first-name" required/><br />
+      <label for="">Last-Name</label><br />
+      <input class="lname" type="text" oninput="this.value = this.value.toUpperCase()" placeholder="last-name" required/><br />
+      <label for="">Email</label><br />
+      <input class="email" type="email" placeholder="email" required/><br />
+      <label for="">Gender</label><br />
+      <input class="gender" type="text" oninput="this.value = this.value.toUpperCase()" placeholder="gender" required /><br />
+     
+     
+      <button type="submit">Submit</button>
+    </form>
+    <div class="infosResults"></div>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
