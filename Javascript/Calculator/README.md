@@ -1,4 +1,4 @@
-**CALCULATOR**
+###CALCULATOR
 
 A fully responsive yet attractive calculator website!
 
