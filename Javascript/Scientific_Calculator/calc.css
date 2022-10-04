@@ -1,0 +1,48 @@
+.container{
+    text-align: center;
+
+}
+table{
+    margin: auto;
+}
+input{
+    font-size: 40px;
+    height: 80px;
+    border: 5px solid;
+    width: 525px;
+    border-radius: 20px;
+}
+button{
+    font-size: 40px;
+    background: rgb(18, 209, 43);
+    border: solid 4px black;
+    height: 80px;
+    width: 90px;
+    border-radius: 20px;
+    margin: 5px;
+}
+button :hover{
+    background-color: purple;
+}
+.calculator{
+    border: solid 3px black;
+    border-radius: 10px;
+    padding: 20px;
+    display: inline-block;
+    background-color: lightblue;
+}
+
+body{
+    background-color: lightsalmon;
+    background-image: url("bgimg3.jpg");
+}
+h1{
+    color: greenyellow;
+    font-size: 50px;
+    margin-top: 0px;
+}
+
+h2{
+    color: lightgreen;
+    margin-bottom: 40px;
+}
