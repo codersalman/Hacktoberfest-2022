@@ -1,0 +1,36 @@
+.first
+{
+    border: 1px solid black;
+    width: 1200px;
+    height: 40px;
+}
+button
+{
+    margin: 10px;
+}
+.vals
+{
+    margin-bottom: -20px;
+}
+.sec
+{
+    border: 1px solid black;
+    width: 1200px;
+    height: 40px;
+}
+.checkbox-div
+{
+    display: inline-block;
+    width: 25px;
+}
+.gameover-message
+{
+    color: rgb(195, 0, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: larger;
+}
+body
+{
+    margin: 30px;
+}
