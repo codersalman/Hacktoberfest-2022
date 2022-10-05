@@ -1,0 +1,224 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.contanier{
+    display: none;
+    height: 360vh;
+    padding-left: 4%;
+    padding-right: 4%;
+    width: 100%;
+}
+.navbar{
+    margin-top: 10px;
+    height: 20vh;
+    background-color: rgb(186, 182, 216);
+    color: #5d16c6;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 28px;
+}
+.row h2 a{
+    text-decoration: none;
+    font-size: 60px;
+    font-weight: bold;
+    color: #5d16c6;
+}
+.row h2 a:hover{
+    text-decoration: underline;
+    font-size: 63px;
+    font-weight: bold;
+    color: #4100a2;
+}
+.navbar input{
+    height: 7vh;
+    padding-left: 10px;
+    font-size: 15px;
+}
+/*Contact Details*/
+.row1{
+    border-right: 0.3px solid black ;
+    border-top: 0.3px solid black ;
+    border-left: 0.3px solid black ;
+    width: 50%;
+    height: 50vh;
+    margin-top: 30px;
+    padding-left: 80px;
+    padding-top: 20px;
+}
+.row1 input{
+    margin-top: 15px;
+    padding-left: 60px;
+    padding-top: 13px;
+    font-size: 15px;
+}
+.row1 span{
+  font-size: 20px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.row1 button{
+    margin-top: 30px;
+    height: 7vh;
+    width: 20vh;
+    font-size: 15px;
+    background-color: rgb(50, 124, 243);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    
+}
+.row1 button:hover{
+    background-color: rgb(31, 111, 241);
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    height:7.5vh;
+}
+.rows{
+    display: flex;
+  
+}
+.row2 img{
+    height: 60vh;
+    margin-left: 80px;
+}
+.row3{
+    font-size: 26px; 
+    margin-top: 140px;
+    font-weight: bold;
+    height: 100px; 
+    padding-top: 30px;
+    background-color: rgb(148, 226, 255);
+    color: rgb(63, 4, 126); 
+    border-radius: 10px;
+}
+.table table{
+    width:100%;
+}
+.table table , th , td{
+    border: 1px solid black;
+    /* border-collapse: collapse; */
+}
+.table table  tr  td{
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.table table  tr  th{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 25px;
+    max-width: 10px;
+}
+.table table  tr  td button{
+     height: 5vh;
+     width: 15vh;
+     background-color: rgb(50, 124, 243);
+     color: white;
+     border: none;
+     border-radius: 5px;
+  }
+.table table  tr  td button:hover{
+    background-color: rgb(31, 111, 241);
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+}
+footer{
+    padding-left: 4%;
+    padding-right: 4%;
+    width: 100%;
+}
+.footer{
+    margin-bottom: 10px;
+    height: 20vh;
+    background-color: rgb(186, 182, 216);
+    color: #5d16c6;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+    
+}
+@media only screen and (max-width:700px){
+    .contanier{
+        height: 200vh;
+        padding-left: 2px;
+        padding-right: 2px;
+        width: 100%;
+    }
+    .navbar{
+        justify-content: left;
+        padding-top: 2px;
+    }
+    .row h2 a{
+        font-size: 30px;
+        color: rgb(0, 158, 158);
+        position: relative;
+        top: 90px;
+        left: 50px;
+    }
+    .row h2 a:hover{
+        font-size: 32px;
+    }
+    .navbar input{
+        height: 5vh;
+        padding-left: 3px;
+        font-size: 10px;
+        position: relative;
+        top: 3px;
+        right: 75px;
+    }
+    /*Contact Details*/
+    .row1{
+        width: 100%;
+        margin-top: 30px;
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+    .row1 button{
+        height: 5vh;
+        width: 15vh;
+        font-size: 15px;
+    }
+    .row1 button:hover{
+        height:5.5vh;
+    }
+    .row2 img{
+        display: none;
+    }
+    .table table  tr  th{
+        font-size: 20px;
+    }
+    .table table  tr  td button{
+         height: 5vh;
+         width: 7vh;
+      }
+      .row3{
+        position: absolute;
+        right: 10px;
+        margin-top: 307px;
+        font-size: 20px; 
+        font-weight: bold;
+        height: 50px; 
+        padding-top: 10px;
+        background-color: rgb(148, 226, 255);
+        color: rgb(63, 4, 126); 
+        border-radius: 10px;
+    }
+    footer{
+        padding-left: 2px;
+        padding-right: 2px;
+        width: 100%;
+    }
+    .footer{
+        margin-bottom: 15px;
+        height: 25vh;
+        font-size: 10px;
+        padding-top: 10px;
+        
+        
+    }
+}

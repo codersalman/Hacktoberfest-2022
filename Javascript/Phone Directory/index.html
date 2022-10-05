@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Phone Directory</title>
+</head>
+
+<body>
+    <div class="contanier" id="contanier">
+        <div class="navbar">
+            <h1>My Phone Directory</h1>
+            <div class="row">
+                <h2><a href="index.html" id="a">Home</a></h2>
+            </div>
+            <input type="text" id="search" placeholder="Search Contact by Name">
+        </div>
+        <div class="rows">
+            <div class="row1 ">
+                <h1>New Contact details:</h1>
+                <br>
+                <span>Name: </span> <input type="text" id="name">
+                <br>
+                <span>Phone #: </span><input type="number" name="" id="phone">
+                <br>
+                <button id="addCon">Add Contact</button>
+            </div>
+            <div class="row2">
+                <img src="phone.jpg" alt="Image">
+            </div>
+            <div class="row3" id="totalCon"> </div>
+        </div>
+        <br>
+        <hr>
+        <br>
+          <h1 style="text-align: center;
+          color: #d17e00;font-size: 40px;">Saved  Contacts</h1>
+        <br>
+        <div class="table" id="table">
+            <table>
+                <tr>
+                    <th>Serial #:</th>
+                    <th>Name</th>
+                    <th>Phone #:</th>
+                    <th>Options</th>
+                </tr>  
+            </table>
+            <div id="tabledd"></div>
+        </div>
+    </div>
+<footer>
+    <div class="footer">
+        <h2>This Phone directory web application authurized and developed by <strong>Muhib Arshad</strong></h2>
+        <br>
+        <h1>Contact me:+923116373841</h1>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+
+</html>
