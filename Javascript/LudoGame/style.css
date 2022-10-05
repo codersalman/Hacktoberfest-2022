@@ -1,0 +1,218 @@
+body{
+   margin: 0%;
+   padding: 0%;
+   background:radial-gradient(ellipse at 48% 46%, #FFF800 46%, #13FF00 51%, #FF0909 71%, #0068FF 86%);
+   display: flex;
+   flex-direction: row;
+}
+.ludo
+{
+   width: 100vw;
+   height:100vh;
+   box-sizing: border-box;
+}
+.ludoPlayArea
+{
+   display: grid;
+   grid-template-columns: auto 9% 9% 9% auto;
+   grid-template-rows: auto 10% 10% 10% auto;
+   width: 60vw;
+   height: 100vh;
+   margin: auto;
+}
+.cell
+{
+   background-color: rgb(305, 305, 305);
+   border: 1px black solid;
+}
+.redstore, .redh
+{
+   background-color: red;
+   border: none;
+   overflow: auto;
+}
+.yellowstore, .yellowh
+{
+   background-color: yellow;
+   border: none;
+   overflow: auto;
+}
+.greenstore, .greenh
+{
+   background-color: rgb(18, 216, 18);
+    border: none;
+    overflow: auto;
+}
+.bluestore, .blueh
+{
+   background-color: blue;
+   border: none;
+   overflow: auto;
+}
+.redtogreen
+{
+   border: none;
+   background: linear-gradient(to top right, red 0%, red 50%, rgb(18, 216, 18) 50%, rgb(18, 216, 18) 100%);
+}
+.greentoyellow
+{
+   background: linear-gradient(to bottom right, rgb(18, 216, 18) 0%, rgb(18, 216, 18) 50%, yellow 50%, yellow 100%);
+   border: none;
+}
+.yellowtoblue
+{
+   background: linear-gradient(to bottom left, yellow 0%, yellow 50%, blue 50%, blue 100%);
+   border: none;
+}
+.bluetored
+{
+   background: linear-gradient(to top left, blue 0%, blue 50%, red 50%, red 100%);
+   border: none;
+}
+.mix{
+   background-image: linear-gradient(rgb(18, 216,18), red,yellow,blue);
+   border: none;
+}
+.redg, .yellowg, .greeng, .blueg
+{
+   width: 70%;
+   height: 70%;
+   background-color: white;
+   border: rgb(144, 191, 181) 3px groove;
+   border-radius: 50px;
+   display: grid;
+   grid-template-columns: auto auto;
+   grid-template-rows: auto auto;
+   align-items: center;
+   justify-content: center;
+   row-gap: 18px;
+   column-gap: 45px;
+}
+
+.redstore, .greenstore,.yellowstore, .bluestore
+{
+   border: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.dicebox
+{
+   width: 40px;
+   height: 40px;
+   border-radius: 5px;
+}
+.redstore .dicebox
+{
+   background-color: red;
+}
+.bluestore .dicebox
+{
+   background-color: blue;
+}
+.greenstore .dicebox
+{
+   background-color: rgb(18, 216, 18);
+}
+.yellowstore .dicebox
+{
+   background-color: yellow;
+}
+.dicebox
+{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+}
+ .dice
+{
+   width: 20px;
+   height: 20px;
+   border-radius: 20px;
+   border: 3px solid black;
+   margin: auto;
+   overflow: auto;
+}
+.redstore .dice, .redDice
+{
+   background-color: rgb(209, 20, 20);
+}
+.bluestore .dice,.blueDice
+{
+   background-color: rgb(33, 33, 211);
+}
+.greenstore .dice, .greenDice
+{
+   background-color: rgb(0, 255, 0);
+}
+.yellowstore .dice, .yellowDice
+{
+   background-color: rgb(237, 237, 9);
+}
+.row
+{
+   display: flex;
+   flex-direction: row;
+}
+.row .boxes
+{
+   border: black 1px solid;
+   width: 16.66%;
+   overflow: auto;
+}
+.col
+{
+   display: flex;
+   flex-direction: column;
+}
+.col .boxes{
+   height: 16.66%;
+   border: black 1px solid;
+   overflow: auto;
+}
+.red, .redstop{
+   background-color: red;
+}
+.yellow, .yellowstop{
+   background-color: yellow;
+}
+.green, .greenstop{
+   background-color: rgb(18, 216, 18);
+}
+.blue, .bluestop{
+   background-color: blue;
+}
+.row3, .row2, .row6, .row5, .row1, .row4
+{
+   border-top: none;
+   border-bottom: none;
+}
+.col1, .col2, .col4, .col5
+{
+   border-right: none;
+}
+.col3, .col2, .col6, .col5
+{
+   border-left: none;
+}
+.DiceRoller
+{
+   position: fixed;
+   bottom: 0px;
+}
+.DiceRoller img{
+   width: 100px;
+   height: 100px;
+   border-radius: 30%;
+   border: 3px rgb(0, 0, 0) outset;
+}
+#rollText
+{
+   background-color: black;
+   color: blanchedalmond;
+   font-weight: bolder;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
