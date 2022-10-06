@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div><h1>Shut the Box</h1></div>
+    <div><h2>The Rules</h2></div>
+    <div>
+        <p>
+            i. Each turn you roll the dice (or die) and select 1 or more boxes which sum to value of your roll. <br>
+            ii. You will not be allowed to pick the boxes which you choose on subsequent turns. <br>
+            iii. When the sum of boxes which are left is less tham or equal to 6, you'll only roll a single dice. <br>
+            iv. When you cannot make a move or you give up, the sum of the boxes which are left gives your score. <br>
+            v. Lower scores are better and a score of 0 is called "Shutting the Box".
+        </p>
+    </div>
+    <div><h2>Dice Roll</h2></div>
+    <div class="first">
+        <button class="roll-dice">Roll Dice</button>
+        <Span>Result: </Span>
+        <span id="dice1"></span>
+        <span id="dice2"></span>
+    </div>
+    <div><h2>Box Selection</h2></div>
+    <div class="checkbox-div">1<input type="checkbox" id="1" value="1" class="checkBox"></div>
+    <div class="checkbox-div">2<input type="checkbox" id="2" value="2" class="checkBox"></div>
+    <div class="checkbox-div">3<input type="checkbox" id="3" value="3" class="checkBox"></div>
+    <div class="checkbox-div">4<input type="checkbox" id="4" value="4" class="checkBox"></div>
+    <div class="checkbox-div">5<input type="checkbox" id="5" value="5" class="checkBox"></div>
+    <div class="checkbox-div">6<input type="checkbox" id="6" value="6" class="checkBox"></div>
+    <div class="checkbox-div">7<input type="checkbox" id="7" value="7" class="checkBox"></div>
+    <div class="checkbox-div">8<input type="checkbox" id="8" value="8" class="checkBox"></div>
+    <div class="checkbox-div">9<input type="checkbox" id="9" value="9" class="checkBox"></div>
+    <div class="sec">
+        <button class="submit-selection">Submit Box Selection</button>
+        <button class="give-up" onclick="giveup()">I give up, I can't make valid move.</button>
+    </div>
+    <br>
+    <div class="gameover-message"></div>
+</body>
+</html>
