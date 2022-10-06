@@ -1,16 +1,24 @@
 
+
 ![alt text](./JS%20resources%20from%20Zero%20to%20Hero.jpg)
+
 
 ## Learning Resources <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png" style="height:20px;width:20px;">
 
 | TOPIC                              | SOURCE NAME           | LINK                                                                                   |
 | ---------------------------------- | --------------------- | -------------------------------------------------------------------------------------- |
+
 | This is a FREE course that covers all the critical aspects of javascript            | Eloquentjavascript          | [click here](https://eloquentjavascript.net/)                |
 |Coding Experts            | Coding Experts               | [click here](https://www.youtube.com/playlist?list=PLAqsB9gf_hQYNbtgfb6Y-5BIaxAjgutlW)                   |
+=======
+| Javascript (Beginner)              | FreeCodeCamp          | [click here](https://www.youtube.com/watch?v=PkZNo7MFNFg)                              |
+| JavaScript (Advance)               | Edureka               | [click here](https://edureka.co/blog/advanced-javascript-tutorial)                     |
+
 | JS for Cats                        | JS for cats           | [click here](https://jsforcats.com)                                                    |
 | JavaScript Basics                  | MDN                   | [click here](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics) |
 | JavaScript Info                    | JAVASCRIPT.INFO       | [click here](https://javascript.info)                                                  |
 | Javascript Tutorial                | Scrimba               | [click here](https://scrimba.com/learn/learnjavascript)                                |
+
 |learn-javascript                 | Learn-Javascript               | [click here](https://learnjavascript.online/)
 | JavaScript (Beginner)              | Programming with Mosh | [click here](https://www.youtube.com/watch?v=W6NZfCO5SIk)                              |
 | Microsoft's intro to Js         | Microsoft               | [click here](https://www.youtube.com/playlist?list=PLlrxD0HtieHhW0NCG7M536uHGOtJ95Ut2)         |
@@ -30,3 +38,4 @@
 Notes
 
 > Starting learning any language by reading and practicing every topic parallelly is the best way to learn to program.
+
