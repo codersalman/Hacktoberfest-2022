@@ -1,0 +1,109 @@
+body{
+	text-align:center;
+	font-size:1.3em;
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: linear-gradient(to right, #614385 , #516395);
+	color: #0f1d2b;
+}
+.text{
+	font-size:1.5em;
+	margin-bottom:5px;
+}
+a{
+	display:inline-block;
+	text-decoration:none;
+	width:80%;
+	height:30px;
+	margin-top:10px;
+	background-color:#0f1d2b;
+	color:white;
+	padding-top:8px;
+	padding-bottom:12px;
+	font-size:1.5em;
+	border-radius: 8px;
+}
+#block{
+	border: 1px #0f1d2b solid;
+	border-radius: 10px;
+	padding: 50px;
+}
+table{
+	display:inline-block;
+	border-collapse:collapse;
+}
+td{
+	border:2px #0f1d2b solid;
+	padding:5px;
+	background:linear-gradient(to left,#614385 , #516395);
+	font-weight:bold;
+	color:white;
+}
+.cell{
+	padding: 10px 15px;
+}
+#reponse{
+	height:20px;
+	width:235px;
+}
+
+#form{
+	padding: 6px;
+	border-radius: 5px;
+	border: 1px #516395 solid;
+}
+
+#form:focus,#form:active{
+	outline: none;
+}
+
+#form1{
+	height:30px;
+	width:150px;
+	background-color:rgb(13, 185, 13);
+	font-weight:bold;
+	color:white;
+	font-size: 0.7em;
+	text-align: center;
+	border: 1px solid #0f1d2b;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 5px;
+}
+
+#form1:focus,#form1:active{
+	outline: none;
+}
+
+#form1:active{
+	transform: scale(0.98);
+}
+
+#retour{
+	width: 150px;
+	font-size: 0.8em;
+	margin-bottom: 10px;
+}
+#retour a{
+	background-color:#0f1d2b ;
+}
+*{
+	margin:0;
+}
+
+.stat{
+	margin-top: 10px;
+	margin-left: 10px;
+	align-content: center;
+}
+
+.stat td{
+	padding: 10px 15px;
+}
+
+/*@Auteur: KAKPO Yaovi Roméo*/
+
