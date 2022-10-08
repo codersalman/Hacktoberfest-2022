@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{font-family: calibri;
+        background-color: darkslategray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        }
+        .ck{
+            width: 300px;
+            height: 300px;
+            background: url('ck.png');
+            border-radius: 50%;
+            background-size: cover;
+            border: 1px solid darkslategray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 0px 10px 2px gray, inset 0px 0px 10px 2px #202020;
+        }
+        .ck::before{
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #999999;
+            z-index: 999;
+        }
+        .ck .hour, .ck .min, .ck .sec{
+            position: absolute;
+        }
+        .ck .hour, .hr{
+            width: 160px;height: 160px;
+        }
+        .ck .min, .mn{
+            width: 190px;height: 190px;
+        }
+        .ck .sec,.sc{
+            width: 230px;height: 230px;
+        }
+        .hr, .mn, .sc{
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            border-radius: 50%;
+        }
+        .hr:before{
+            content: "";
+            position: absolute;
+            height: 100px;
+            width: 10px;
+            background-color: deeppink;
+            z-index: 3;
+        }
+        
+        .mn::before{
+            content: "";
+            position: absolute;
+            height: 120px;
+            width: 5px;
+            background-color: white;
+            z-index: 4;
+        }
+        
+    
+        .sc::before{
+            content: "";
+            position: absolute;
+            height: 150px;
+            width: 2px;
+            background-color: yellow;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+    <div class="ck">
+        <div class="hour">
+            <div class="hr" id="hr"></div>
+        </div>
+        <div class="min">
+            <div class="mn" id="mn"></div>
+        </div>
+        <div class="sec">
+            <div class="sc" id></div>
+        </div>
+    </div>
 
+    <script>
+
+        const hr = document.querySelector('.hr');
+        const mn = document.querySelector('.mn');
+        const sc = document.querySelector('.sc');
+
+        setInterval(() => {
+            let day = new Date();
+
+            hr.style.transform = `rotateZ(${(day.getHours()*30)+((day.getMinutes()*6)/12)}deg)`;
+            mn.style.transform = `rotateZ(${day.getMinutes()*6}deg)`;
+            sc.style.transform = `rotateZ(${day.getSeconds()*6}deg)`;
+        });
+    </script>
+</body>
+</html>
