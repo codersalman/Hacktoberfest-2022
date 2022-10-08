@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8"/>
+		<title>GuessCode</title>
+		<link rel="stylesheet" type="text/css" href="../styles/style.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<body>
+		
+		<div style="display: flex; flex-wrap: wrap;">
+			<div id="block">
+				<!--<div id="resultat">
+					
+				</div>-->
+				<span style="color:white ;">Find the 3-digit code by following the clues<br/><br/></span>
+				
+				<div>
+					<table>
+						<tr>
+							<td class="cell cell0">0</td>
+							<td class="cell cell1">0</td>
+							<td class="cell cell2">0</td>
+							<td>
+								A number is correct and well placed</td>
+						</tr>
+						<tr>
+							<td class="cell cell3">0</td>
+							<td class="cell cell4">0</td>
+							<td class="cell cell5">0</td>
+							<td>A number is correct and misplaced</td>
+						</tr>
+						<tr>
+							<td class="cell cell6">0</td>
+							<td class="cell cell7">0</td>
+							<td class="cell cell8">0</td>
+							<td>Two digits are correct and misplaced</td>
+						</tr>
+						<tr>
+							<td class="cell cell9">0</td>
+							<td class="cell cell10">0</td>
+							<td class="cell cell11">0</td>
+							<td>Nothing is right</td>
+						</tr>
+						<tr>
+							<td class="cell cell12"></td>
+							<td class="cell cell13"></td>
+							<td class="cell cell14"></td>
+							<td>
+								A number is correct and misplaced</td>
+						</tr>
+					</table>
+				</div>
+				<p style="margin-top:15px;">
+					<form method="post" id="formulaire">
+						<input type="number" placeholder="Enter code:" id="form"/>
+						<button type="button" class="submit" id="form1">Enter</button>
+					</form>
+					
+				</p>
+				<p style="margin-top:15px;color: rgb(244, 61, 61);">
+					NB: The digits of the codes are all distinct and included from 0 to 9</p>
+			</div>
+			<div class="stat">
+				<table>
+					<tr>
+						<td>
+							Number of game 🤺: </td>
+						<td class="t">0</td>
+					</tr>
+					<tr>
+						<td>Victories 💪🏼: </td>
+						<td class="v">0</td>
+					</tr>
+					<tr>
+						<td>Chess 👎🏼: </td>
+						<td class="e">0</td>
+					</tr>
+					<tr>
+						<td>Solutions seen 👀: </td>
+						<td class="s">0</td>
+					</tr>
+				</table> 
+			</div>
+		</div>
+		
+		<script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/common.js"></script>
+		<script src="../js/main1.js">
+		</script>
+	</body>
+</html>
