@@ -1,6 +1,6 @@
 ## Weather App using ReactJS
 
-Now this week, we will learn React.JS by creating a simple Weather App.
+Here, we will learn React.JS by creating a simple Weather App.
 
 
 #### React.JS :
