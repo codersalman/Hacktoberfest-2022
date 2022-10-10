@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+td,
+th {
+  border: 0.5px solid #999;
+  padding: 0.5rem;
+  width: 100px;
+  height: 1rem;
+}
+
+.btn {
+  width: 200px;
+  background-color: cornflowerblue;
+  color: white;
+  align-self: center;
+  height: 40px;
+  position: sticky;
+  top: 40px;
+
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.pos {
+  position: sticky;
+  top: 0px;
+}
