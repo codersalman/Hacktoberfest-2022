@@ -20,7 +20,7 @@ install the library required for this application using the command
 npm install values.js --save
 ```
 
-Delete deafult public and src folder from the application, move the src and public folders here to the place oof old folders
+Delete default public and src folder from the application, move the src and public folders here to the place of old folders
 
 Run the application using the command
 
