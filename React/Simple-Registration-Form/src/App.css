@@ -1,0 +1,31 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+nav{
+  margin:0 auto;
+  padding:15px 25px;
+  background: black;
+  color:white;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav a{
+  text-decoration:none;
+  color:white;
+  cursor:pointer;
+  /* padding:0 15px; */
+}
+nav a.active{
+  color:dodgerblue;
+  font-weight:bolder;
+}
+.link-container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap:10px;
+}
