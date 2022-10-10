@@ -1,8 +1,6 @@
-### CreWork Month-3 Week-2 Assignment
+##  GitHub DevFinder App using React.JS
 
-## Challenge- GitHub App using React.JS
-
-Now this week, we will learn React.JS by creating a simple GitHub App using GitHub API.
+Here, we will learn React.JS by creating a simple GitHub DevFinder App using GitHub API.
 
 
 #### React.JS :
@@ -23,14 +21,3 @@ Live Demo: https://react-github-devfinder.netlify.app/
 <img src="https://github.com/shanolhere/CreWork/blob/main/week-12ReactAPIProjects/assets/githubFinder.png" alt="Page">
 
 <br/>
-
-
-##### **My Key Takeaways:**
-1. This week learnt about React hooks concepts.
-2. Looking forward to learn more.
-
-
-##### **My Social Links**
-
-- **Portfolio**  - [PortfolioLink](https://sabiya.netlify.app/)
-- **Twitter** - [TwitterLink](https://twitter.com/nerd_fswd)
