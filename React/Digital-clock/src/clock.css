@@ -1,0 +1,16 @@
+.Time {
+    height: 500px;
+    width: 800px;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    padding-top: 70px;
+    font-family: digital-7;
+    color: lime;
+    font-size: 110px;
+}
+
+@font-face{
+    font-family: 'digital-7';
+    src: local('digital-7'), url(./fonts/digital-7.ttf) format('truetype');
+}
