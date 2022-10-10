@@ -1,0 +1,183 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+body{
+  background:#E7E7E7;
+  font-family: sans-serif;
+}
+.container{
+  /* width:100%; */
+    position: relative;
+    margin:2% auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background-color: #fff;
+    width:360px;
+    border-radius: 10px;
+    padding:30px;
+    gap:20px;
+}
+.heading{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.close{
+  border:1px solid #E7E7E7;;
+  border-radius: 50%;
+  aspect-ratio:1/1;
+  padding:2px;
+  color:gray;
+}
+.google{
+  outline:none;
+  border:2px solid #E5E5E5;
+  border-radius: 5px;
+  padding:7px;
+  background-color:white;
+  text-align: center;
+  font-weight: bold;;
+}
+.logo-google{
+  margin-bottom:-2px;
+  padding:0 2px;
+}
+hr{
+    border:1px solid #E5E5E5;
+    margin:6px 0 6px 0;
+    background-color: #E5E5E5;
+}
+label{
+    font-weight:bold;
+    padding:20px 0;
+}
+input{
+  margin:10px 0;
+  outline:none;
+  border:1px solid #E5E5E5;
+  border-radius: 5px;
+  padding:7px;
+  background-color:white;
+  width:100%;
+  color:#585757;
+  font-weight: 500;
+  font-size:16px;
+}
+input:focus{
+  color:#585757;
+  border:2px solid #0084FF;
+}
+.boxes{
+    position: absolute;
+    margin-top:6px;
+    display:flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width:80%;
+    gap:10px;
+    margin-left:5px;
+}
+.box{
+    background-color: #E5E5E5;
+    width:95%;
+    height:4px;
+    border-radius: 5px;
+}
+
+.termsBox{
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    gap:10px;
+    padding:10px 20px 0 20px;
+    width:100%;
+}
+.checkButton{
+    margin-left:-140px;
+}
+.termsBox span{
+    display: block;
+    margin-left:-120px;
+}
+a{
+    text-decoration: none;
+    color:#1890FF;
+    font-weight:bold;
+}
+.signup{
+    color:white;
+    outline:none;
+    border:none;
+    border-radius: 5px;
+    background-color: #1890FF;
+    padding:8px;
+}
+.signup:hover,.signup:focus{
+    cursor: pointer;
+    color:white;
+}
+.account{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:6px;
+}
+input::placeholder{
+    color:#b4afaf;
+}
+.error{
+  color:red;
+  padding:1px 0;
+  font-size:14px;
+}
+.pwd-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.eye{
+  position: absolute;
+    right: 5px;
+    color: grey;
+}
+.eyeOffIcon{
+    position:absolute;
+    right:10px;
+    bottom:20px;
+    color:#b4afaf;
+    cursor:pointer;
+    visibility:visible;
+}
+.eyeOnIcon{
+    visibility:visible;
+    position: absolute;
+    right:10px;
+    bottom:20px;
+    color:#b4afaf;
+    cursor:pointer;
+}
+.login{
+    color:white;
+    outline:none;
+    border:none;
+    border-radius: 5px;
+    background-color: #1890FF;
+    padding:8px;
+}
+.login:hover,.login:focus{
+    cursor: pointer;
+    color:white;
+}
+.forgot{
+    margin:10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
