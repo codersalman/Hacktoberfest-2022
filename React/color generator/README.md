@@ -6,6 +6,28 @@
 
 <br>
 
+#### Usage
+
+First create a react project using the command
+
+```
+npx create-react-app app-name
+```
+
+install the library required for this application using the command
+
+```
+npm install values.js --save
+```
+
+Delete deafult public and src folder from the application, move the src and public folders here to the place oof old folders
+
+Run the application using the command
+
+```
+npm start
+```
+
 ### Check out the project
 
-[Color generator](https://busybee-fetching-data-react-hooks.netlify.app/)
+[Color generator](https://busybee-color-generator.netlify.app/)
