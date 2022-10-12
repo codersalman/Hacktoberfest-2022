@@ -24,6 +24,7 @@ Live Demo: https://ecart-react-app.netlify.app/
 <img src="https://github.com/shanolhere/Hacktoberfest-2022/blob/main/React/Ecommerce-App/assets/ecart.png" alt="Page">
 
 <br/>
+
 #### Product Details Page:
 <br/>
 
@@ -37,6 +38,7 @@ Live Demo: https://ecart-react-app.netlify.app/
 <img src="https://github.com/shanolhere/Hacktoberfest-2022/blob/main/React/Ecommerce-App/assets/ecart-wishlistPage.png" alt="Page">
 
 <br/>
+
 #### Cart Page:
 <br/>
 
