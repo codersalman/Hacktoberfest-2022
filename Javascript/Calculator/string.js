@@ -3,8 +3,11 @@ let buttons = document.querySelectorAll('.button');
 Array.from(buttons).forEach((button)=>{
     button.addEventListener('click' , (e)=> {
         if(e.target.innerHTML == '='){
-            string = eval(string);
-            document.querySelector('input').value = string;
+            if (string === "") {
+                document.querySelector('input').value = string;
+            } else {
+                document.querySelector('input').value = eval(string);
+            }
         }
         else if(e.target.innerHTML == 'AC'){
             string = '';
