@@ -1,0 +1,91 @@
+import java.awt.Color;
+import java.awt.SystemColor;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+public class Login implements ActionListener
+{
+	private static JLabel userLabel1;
+    private static JLabel userLabel2;
+    private static JTextField userText;
+    private static JLabel passwordlabel;
+    private static JPasswordField passwordText;
+    private static JButton button;
+    private static JLabel success;
+   
+	public static void main(String[] args)
+	{
+		JPanel panel=new JPanel();
+		
+		JFrame frame=new JFrame();
+		frame.setBackground(new Color(0,0,0));
+		frame.setSize(500,300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
+		frame.add(panel);
+		panel.setLayout(null);
+		
+
+		userLabel1=new JLabel("Login Details");
+		userLabel1.setBackground(new Color(255, 182, 193));
+		userLabel1.setBounds(195,7,80,25);
+		panel.add(userLabel1);
+		
+		userLabel2=new JLabel("Username");
+		userLabel2.setBackground(new Color(240, 248, 255));
+		userLabel2.setBounds(130,65,80,25);
+		panel.add(userLabel2);
+		
+		userText= new JTextField(20);
+		userText.setBackground(new Color(240, 248, 255));
+		userText.setBounds(230,65,165,25);
+		panel.add(userText);
+	
+
+		passwordlabel=new JLabel("Password");
+		passwordlabel.setBackground(new Color(255, 182, 193));
+		passwordlabel.setBounds(130,110,80,25);
+		panel.add(passwordlabel);
+		
+	    passwordText=new JPasswordField();
+	    userText.setBackground(new Color(255, 238, 196));
+		passwordText.setBounds(230,110,165,25);
+		panel.add(passwordText);
+		
+		button= new JButton("Login");
+		button.setBackground(new Color(240, 248, 255));
+		button.setBounds(200,170,80,25);
+		button.addActionListener(new Login());
+		panel.add(button);
+		
+		success= new JLabel("");
+		success.setBackground(new Color(255, 228, 225));
+		success.setBounds(165,210,300,25);
+		panel.add(success);
+		success.setText(null);
+		
+		frame.setVisible(true);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) 
+	{
+            String user= userText.getText();
+            String Password=passwordText.getText();
+            System.out.println(user+","+Password);
+		
+            if(user.equals("pratheeksha") && Password.equals("pppp"))
+            {
+            	success.setText("        Login Successful ");
+            }
+            else
+            	success.setText("        Try Again Later!!");
+            
+	}
+}
