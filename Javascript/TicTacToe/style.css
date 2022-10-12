@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@700&family=Open+Sans:ital@1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*  HERE WE WRITE UTILITY CLASSES, WHICH ARE USED COMMONLY IN OUR PROJECT */
+
+.br{
+    border-right:0;
+}
+
+.bl{
+    border-left:0;
+}
+
+.bt{
+    border-top:0;
+}
+
+.bb{
+    border-bottom:0;
+}
+
+
+nav{
+    background-color: black;
+    color: white;
+    height: 10vh;
+    
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+li{
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 20px;
+    list-style-type: none;
+}
+
+.GameContainer{
+    display: flex;
+    justify-content: center;
+    background-color: brown;
+    margin: 50px 0;
+}
+
+.container{
+    /*  HERE WE MAKE CONTAINER GRID AND NOT GAMECONTAINER GRID IT IS DIFFERENT FROM FLEX */
+    display: grid;
+    grid-template-columns: 10vw 10vw 10vw;
+    /*  WE CAN WRITE THE SAME AS */
+    grid-template-rows: repeat(3,10vw);
+    font-family: 'Fuzzy Bubbles', cursive;
+  
+}
+
+.box{
+    /* box-sizing: content-box; */
+    border: 2px solid black;
+    font-size: 7vw;
+    /*  MAKING BOX A FLEX BOX TO ALLIGN BOXTEXT INSIDE IT */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info{
+    font-size: 22px;
+}
+.GameInfo{
+    padding: 0 34px;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+.GameInfo h1{
+    font-size: 2.5rem;
+}
+
+.box:hover{
+    background-color: rgb(77, 77, 77);
+    cursor: pointer;
+}
+
+img{
+    height: 20vh;
+}
+
+.gif1 img{
+    margin:  10px 5px;
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+#Butt{
+    background-color: rgb(155, 155, 155);
+    margin: 0 20px;
+    padding: 6px  14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+
+
+/*  ADDING RESPOSIVENESS */
+@media screen and (max-width : 950px) {
+    
+    .GameContainer{
+        flex-wrap: wrap;
+    }
+    .GameInfo{
+        margin-top: 30px;
+    }
+    .GameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);
+    }
+    .box{
+        font-size: 15vw;
+    }
+}
