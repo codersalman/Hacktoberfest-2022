@@ -1,0 +1,390 @@
+/* .App {
+  font-family: sans-serif;
+  text-align: center;
+} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+nav {
+  background: black;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav a,
+nav a:hover {
+  text-decoration: none;
+  color: white;
+}
+nav a.active {
+  color: rgb(102, 102, 238);
+}
+nav h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.productsContainer {
+  margin: 2rem auto;
+}
+.cardContainer,
+.wishlistProducts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.card {
+  width: 320px;
+  height: 490px;
+  padding: 10px 10px;
+  /* background: red; */
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+img {
+  padding: 25px;
+  width: 300px;
+  height: 290px;
+  border-radius: 5px;
+}
+.cardDetails {
+  margin: 10px auto;
+  /* text-align: center; */
+}
+.title {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  font-weight: 200;
+  text-align: center;
+}
+.priceContainer {
+  margin: -5px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.price {
+  font-size: 28px;
+  font-weight: 500;
+  color: #0f1111;
+  font-family: "Amazon Ember", Arial, sans-serif;
+}
+.rating,
+.count {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+  /* background: red; */
+}
+.rating p,
+.count p {
+  font-size: 18px;
+}
+button {
+  outline: none;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+.btnContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.addCart {
+  background: green;
+}
+.addWishlist {
+  background: rgb(240, 41, 74);
+}
+.addCart:hover {
+  border: 2px solid green;
+  color: green;
+  background: white;
+}
+.addWishlist:hover {
+  border: 2px solid rgb(240, 41, 74);
+  color: rgb(240, 41, 74);
+  background: white;
+}
+
+/*carddetail page styling*/
+.container {
+  margin: 1rem auto;
+}
+.card1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+/* .title{
+  display: flex;
+} */
+.title span {
+  background: orangered;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  padding: 3px;
+  text-align: center;
+}
+.card1 p {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.details .btnContainer,
+.priceContainer {
+  justify-content: center;
+  gap: 10px;
+}
+.backBtn {
+  background: rgb(102, 102, 238);
+  letter-spacing: 1px;
+}
+.backBtn:hover {
+  border: 2px solid rgb(102, 102, 238);
+  background: white;
+  color: rgb(102, 102, 238);
+}
+.browseBtn {
+  margin: 0.5rem 1rem 20px 20px;
+}
+.links {
+  display: flex;
+  gap: 20px;
+}
+/* wishlist page styling*/
+.wishlistContainer {
+  margin: 2rem auto;
+  text-align: center;
+}
+.wishlistProducts {
+  margin: 2rem auto;
+}
+q {
+  font-style: italic;
+  color: rgb(219, 219, 219);
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+h5 span {
+  color: rgb(240, 41, 74);
+  font-size: 24px;
+}
+
+/*cart page styling*/
+.cartContainer {
+  margin: 2rem auto;
+  text-align: center;
+}
+.productsCart {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.cartListMap,
+.checkoutContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+.checkoutContainer {
+  margin: 0.5rem;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  height: max-content;
+  width: 440px;
+  padding: 25px 15px;
+}
+.productCard {
+  margin: 1rem auto;
+  width: max-content;
+  height: 220px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* background: red; */
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+.cartImage {
+  width: 200px;
+  height: 200px;
+}
+.productCard-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 10px;
+}
+.productCard-title p,
+.productCard-title h5 {
+  text-align: left;
+}
+.productCard-title .title {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+/* input container stylings */
+.price-container {
+  /* background: red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.inputContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.inputContainer input {
+  outline: none;
+  width: 30%;
+  border-radius: 5px;
+  font-size: 17px;
+  text-align: center;
+  font-weight: 600;
+}
+.inputContainer button {
+  /* background: black; */
+  color: white;
+  /* height: 25px; */
+  align-content: center;
+  text-align: center;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  padding: 2px 11px;
+}
+.incr {
+  background: green;
+}
+.decr {
+  background: red;
+}
+.cartBtn {
+  background: rgb(102, 102, 238);
+  letter-spacing: 1px;
+  width: 100%;
+  font-size: 20px;
+}
+.cartBtn:hover {
+  border: 2px solid rgb(102, 102, 238);
+  background: white;
+  color: rgb(102, 102, 238);
+}
+.checkoutContainer table {
+  text-align: center;
+  /* background: red; */
+  width: 100%;
+}
+tr,
+th {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  /* padding: 12px 0; */
+}
+thead {
+  background: rgb(112, 112, 112);
+  border-radius: 15px;
+}
+thead tr th {
+  padding: 3px 0;
+}
+td {
+  padding: 6px 0;
+  margin: 5px;
+  margin: 10px;
+  text-align: center;
+}
+hr {
+  width: 100%;
+  margin: 10px auto;
+  border: 1px solid white;
+  background: white;
+}
+p span {
+  font-size: 32px;
+  font-weight: 600;
+}
+.total {
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+/* wishlist icon and badge styling */
+
+.wishlistIcon {
+  position: relative;
+}
+.badge2 {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  background: rgb(240, 41, 74);
+  color: white;
+  font-size: 14px;
+  border-radius: 50%;
+  padding: 2px 5px;
+  aspect-ratio: 1/1;
+}
+.cartIcon {
+  position: relative;
+}
+.badge1 {
+  position: absolute;
+  top: 14px;
+  right: 58px;
+  background: green;
+  color: white;
+  font-size: 14px;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  padding: 2px 5px;
+}
+/* toast messages styling */
+
+.toast-addWishlist {
+  font-size: 18px;
+  background: rgb(240, 41, 74);
+  color: white;
+  border-radius: 5px;
+}
+.toast-removeWishlist,
+.toast-removeCart {
+  font-size: 18px;
+  color: white;
+  border-radius: 5px;
+}
+.toast-addCart {
+  font-size: 18px;
+  background: green;
+  color: white;
+  border-radius: 5px;
+}
