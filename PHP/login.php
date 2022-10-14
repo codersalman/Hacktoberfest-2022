@@ -39,7 +39,7 @@ if($error) {
 <div class="display-error"><h1>Warning!</h1>
 <?php echo implode('<br/>',$error); ?> </div>
   <?php } else {
-	$sql = "select * from user where email='$email' and password='password';";
+	$sql = "select * from user where email='$email' and password='$password';";
     $result = mysqli_query($grab, $sql);
     $data=mysqli_fetch_all($result);
 	if ($data) {
