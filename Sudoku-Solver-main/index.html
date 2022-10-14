@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Sudoku Solver</h1>
+    <div class="sudoku">
+        <div class="board-and-messages">
+            <p id="unsolvable" data-message>
+                <span>
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        x="0px" y="0px" viewBox="0 0 1000 1000" width="24" height="24"
+                        enable-background="new 0 0 1000 1000" xml:space="preserve" title="incorrect icon">
+                        <metadata>
+                            Svg Vector Icons : http://www.onlinewebfonts.com/icon
+                        </metadata>
+                        <g>
+                            <path
+                                d="M500,990C229.4,990,10,770.6,10,500S229.4,10,500,10s490,219.4,490,490S770.6,990,500,990z M500,84.7C270.7,84.7,84.7,270.7,84.7,500S270.7,915.3,500,915.3S915.3,729.3,915.3,500S729.3,84.7,500,84.7z M764.3,764.3c-26.5,26.5-69.6,26.5-96.1,0L500,596.1L331.8,764.3c-26.5,26.5-69.6,26.5-96.1,0c-26.5-26.5-26.5-69.6,0-96.1L403.9,500L235.7,331.8c-26.5-26.5-26.5-69.6,0-96.1c26.5-26.5,69.6-26.5,96.1,0L500,403.9l168.2-168.2c26.5-26.5,69.6-26.5,96.1,0c26.5,26.5,26.5,69.6,0,96.1L596.1,500l168.2,168.2C790.9,694.8,790.9,737.8,764.3,764.3z" />
+                        </g>
+                    </svg>
+                </span>
+
+                Sudoku Cannot Be Solved
+            </p>
+            <p id="invalid-board" data-message>
+                <span>
+                    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                    <svg title="warning-icon" version="1.1" id="WARNING" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24" height="24"
+                        viewBox="0 0 1800 1800" enable-background="new 0 0 1800 1800" xml:space="preserve">
+                        <g>
+                            <path fill="#333333" d="M770.8,796.605v265.968c0,71.216,57.939,129.154,129.154,129.154c71.209,0,129.148-57.938,129.157-129.154
+                        l-0.009-265.964c0-71.215-57.93-129.154-129.148-129.154C828.739,667.456,770.8,725.39,770.8,796.605z M966.08,796.609
+                        l0.009,265.96c-0.009,36.469-29.672,66.138-66.135,66.138c-36.464,0-66.133-29.669-66.133-66.134V796.605
+                        c0-36.465,29.668-66.129,66.133-66.129C936.417,730.476,966.08,760.145,966.08,796.609z" />
+                            <path fill="#333333" d="M899.954,1231.867c-71.566,0-129.787,58.221-129.787,129.787c0,71.572,58.221,129.796,129.787,129.796
+                        c71.569,0,129.791-58.224,129.791-129.796C1029.744,1290.088,971.522,1231.867,899.954,1231.867z M899.954,1428.43
+                        c-36.816,0-66.766-29.954-66.766-66.775c0-36.816,29.95-66.767,66.766-66.767c36.814,0,66.768,29.95,66.768,66.767
+                        C966.722,1398.476,936.768,1428.43,899.954,1428.43z" />
+                            <path fill="#333333"
+                                d="M1790.452,1630.839L927.246,135.725c-5.635-9.75-16.037-15.755-27.292-15.755
+                        c-11.258,0-21.659,6.004-27.29,15.755L8.344,1632.76c-5.627,9.751-5.627,21.761,0,31.511c5.631,9.75,16.032,15.755,27.29,15.755
+                        h1728.644c0.037,0.004,0.063,0.004,0.089,0c17.4,0,31.511-14.106,31.511-31.51
+                        C1795.877,1641.964,1793.882,1635.881,1790.452,1630.839z M90.21,1617.004L899.954,214.5l809.745,1402.503H90.21z" />
+                        </g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                        <g></g>
+                    </svg>
+                </span>
+                Invalid Sudoku Board
+            </p>
+            <p id="solved" data-message>
+                Solved
+                <span><svg title="check-mark" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path class="cls-2"
+                            d="M9.71,11.29a1,1,0,0,0-1.42,1.42l3,3A1,1,0,0,0,12,16h0a1,1,0,0,0,.72-.34l7-8a1,1,0,0,0-1.5-1.32L12,13.54Z" />
+                        <path class="cls-2"
+                            d="M21,11h0a1,1,0,0,0-1,1,8,8,0,0,1-8,8h0A8,8,0,0,1,6.33,6.36,7.93,7.93,0,0,1,12,4a8.79,8.79,0,0,1,1.9.22,1,1,0,1,0,.47-1.94A10.54,10.54,0,0,0,12,2,10,10,0,0,0,5,19.09,9.93,9.93,0,0,0,12,22h0A10,10,0,0,0,22,12,1,1,0,0,0,21,11Z" />
+                    </svg></span><span id="timeTaken"></span>
+            </p>
+            <p id="solving" data-message>
+                <span>
+                    <svg title="gear-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M24 13.616v-3.232c-1.651-.587-2.694-.752-3.219-2.019v-.001c-.527-1.271.1-2.134.847-3.707l-2.285-2.285c-1.561.742-2.433 1.375-3.707.847h-.001c-1.269-.526-1.435-1.576-2.019-3.219h-3.232c-.582 1.635-.749 2.692-2.019 3.219h-.001c-1.271.528-2.132-.098-3.707-.847l-2.285 2.285c.745 1.568 1.375 2.434.847 3.707-.527 1.271-1.584 1.438-3.219 2.02v3.232c1.632.58 2.692.749 3.219 2.019.53 1.282-.114 2.166-.847 3.707l2.285 2.286c1.562-.743 2.434-1.375 3.707-.847h.001c1.27.526 1.436 1.579 2.019 3.219h3.232c.582-1.636.75-2.69 2.027-3.222h.001c1.262-.524 2.12.101 3.698.851l2.285-2.286c-.744-1.563-1.375-2.433-.848-3.706.527-1.271 1.588-1.44 3.221-2.021zm-12 2.384c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4z" />
+                    </svg>
+                </span>
+                Solving...
+            </p>
+
+            <canvas id="canvas-sudoku"></canvas>
+        </div>
+
+        <div class="tools">
+            <button id="empty-board" data-operation>
+                <svg title="empty-board" viewBox="0 0 16 16" class="bi bi-grid-3x3" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13zM1.5 1a.5.5 0 0 0-.5.5V5h4V1H1.5zM5 6H1v4h4V6zm1 4V6h4v4H6zm-1 1H1v3.5a.5.5 0 0 0 .5.5H5v-4zm1 0h4v4H6v-4zm5 0v4h3.5a.5.5 0 0 0 .5-.5V11h-4zm0-1h4V6h-4v4zm0-5h4V1.5a.5.5 0 0 0-.5-.5H11v4zm-1 0H6V1h4v4z" />
+                </svg>
+            </button>
+            <label for="empty-board">Empty Board</label>
+
+            <button id="create-board" data-operation>
+                <svg version="1.1" id="Capa_1" title="create-board" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 445.049 445.049"
+                    style="enable-background: new 0 0 445.049 445.049" xml:space="preserve">
+                    <path id="XMLID_176_" d="M56.507,73.548c-3.393-3.632-3.2-9.327,0.433-12.72l26.938-25.166c2.619-2.447,6.44-3.106,9.729-1.679
+                   c3.288,1.428,5.415,4.67,5.415,8.255v70.863c0,4.971-4.029,9-9,9s-9-4.029-9-9V62.963L69.228,73.98
+                   C65.595,77.374,59.9,77.181,56.507,73.548z M437.533,9v170.012c0,4.971-4.029,9-9,9s-9-4.029-9-9v-23.673H300.193v119.338h25.329
+                   c4.971,0,9,4.029,9,9s-4.029,9-9,9h-25.329v119.338h25.329c4.971,0,9,4.029,9,9s-4.029,9-9,9h-34.138
+                   c-0.063,0.001-0.127,0.002-0.191,0.002c-0.063,0-0.127-0.001-0.191-0.002H154.048c-0.125,0.003-0.254,0.003-0.382,0H16.546
+                   c-4.97,0-9-4.029-9-8.999L7.536,284.28c-0.013-0.2-0.02-0.4-0.02-0.604c0-0.202,0.007-0.402,0.02-0.602l-0.01-136.31
+                   c-0.006-0.142-0.01-0.283-0.01-0.427c0-0.143,0.003-0.284,0.01-0.426L7.516,9.001c0-2.388,0.948-4.677,2.636-6.364
+                   C11.84,0.948,14.129,0,16.516,0h412.017C433.503,0,437.533,4.029,437.533,9z M144.857,292.677H25.537l0.009,119.338h119.312V292.677
+                   z M144.857,155.339H25.527l0.008,119.338h119.322V155.339z M144.857,18H25.517l0.009,119.339h119.332V18z M282.193,292.677H162.857
+                   v119.338h119.336V292.677z M282.193,155.339H162.857v119.338h119.336V155.339z M282.193,18H162.857v119.339h119.336V18z M419.533,18
+                   H300.193v119.339h119.339V18z M435.378,231.685c1.39,1.629,2.154,3.701,2.154,5.843v198.521c0,4.971-4.029,9-9,9H371.8
+                   c-4.971,0-9-4.029-9-9V237.527c0-2.142,0.764-4.214,2.154-5.843l28.366-33.234c1.71-2.004,4.212-3.157,6.846-3.157
+                   s5.136,1.153,6.846,3.157L435.378,231.685z M419.533,408.026H380.8v19.022h38.733V408.026z M419.533,261.238H380.8v128.788h38.733
+                   V261.238z M419.533,240.846l-19.367-22.689L380.8,240.846v2.393h38.733V240.846z M238.798,238.695H189.91c-4.971,0-9,4.029-9,9
+                   s4.029,9,9,9h48.888c13.974,0,25.342-11.369,25.342-25.344c0-6.223-2.254-11.928-5.988-16.344
+                   c3.734-4.416,5.988-10.121,5.988-16.344c0-13.975-11.369-25.344-25.342-25.344H189.91c-4.971,0-9,4.029-9,9s4.029,9,9,9h48.888
+                   c4.048,0,7.342,3.295,7.342,7.345c0,4.049-3.294,7.343-7.342,7.343h-28.77c-4.971,0-9,4.029-9,9s4.029,9,9,9h28.77
+                   c4.048,0,7.342,3.295,7.342,7.345C246.14,235.401,242.846,238.695,238.798,238.695z" />
+                </svg>
+            </button>
+            <label for="create-board">Create Board</label>
+
+            <button id="reset-board" data-operation>
+                <img src="https://github.com/gerrardNwoke/codePen-imgs/blob/main/imgs/reset-icon.png?raw=true"
+                    alt="reset-board" />
+            </button>
+            <label for="reset-board">Reset Board</label>
+
+            <button id="notes" data-operation>
+                <svg title="notes-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
+                    style="enable-background: new 0 0 512 512" xml:space="preserve">
+                    <path d="M403.914,0L54.044,349.871L0,512l162.128-54.044L512,108.086L403.914,0z M295.829,151.319l21.617,21.617L110.638,379.745
+			l-21.617-21.617L295.829,151.319z M71.532,455.932l-15.463-15.463l18.015-54.043l51.491,51.491L71.532,455.932z M153.871,422.979
+			l-21.617-21.617l206.809-206.809l21.617,21.617L153.871,422.979z M382.297,194.555l-64.852-64.852l21.617-21.617l64.852,64.852
+			L382.297,194.555z M360.679,86.468l43.234-43.235l64.853,64.853l-43.235,43.234L360.679,86.468z" />
+                </svg>
+                <span id="notes-activity">off</span>
+            </button>
+
+            <label for="notes">Notes</label>
+
+            <button id="quick-solve" data-operation>
+                <img src="https://github.com/gerrardNwoke/codePen-imgs/blob/main/imgs/solve-icon.png?raw=true"
+                    alt="solved-sudoku" />
+            </button>
+            <label for="quick-solve">Quick Solve</label>
+        </div>
+
+        <div class="num-inputs">
+            <button data-number id="1">1</button>
+            <button data-number id="2">2</button>
+            <button data-number id="3">3</button>
+            <button data-number id="4">4</button>
+            <button data-number id="5">5</button>
+            <button data-number id="6">6</button>
+            <button data-number id="7">7</button>
+            <button data-number id="8">8</button>
+            <button data-number id="9">9</button>
+            <button data-number id="0">
+                <?xml version="1.0" encoding="UTF-8"?>
+                <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                <svg title="erase-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1" id="mdi-eraser" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M16.24,3.56L21.19,8.5C21.97,9.29 21.97,10.55 21.19,11.34L12,20.53C10.44,22.09 7.91,22.09 6.34,20.53L2.81,17C2.03,16.21 2.03,14.95 2.81,14.16L13.41,3.56C14.2,2.78 15.46,2.78 16.24,3.56M4.22,15.58L7.76,19.11C8.54,19.9 9.8,19.9 10.59,19.11L14.12,15.58L9.17,10.63L4.22,15.58Z" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="controls">
+            <div class="solving-controls">
+                <label for="visualize-solve">Visualize Solve</label>
+                <button id="visualize-solve" data-operation>
+                    <img src="https://github.com/gerrardNwoke/codePen-imgs/blob/main/imgs/solve-icon.png?raw=true"
+                        alt="solved-sudoku" />
+                    <span id="solve-state">Play</span>
+                </button>
+                <div class="speed-control">
+                    <label for="speed">Speed : <span id="speed-value">1</span>ms</label>
+                    <p class="min-max">
+                        <span class="min">1</span>
+                        <input type="range" min="1" max="1000" id="speed" /><span class="max">1000</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="generate-controls">
+                <label for="generate">Generate Board</label>
+                <button id="generate" data-operation>
+                    <img src="https://github.com/gerrardNwoke/codePen-imgs/blob/main/imgs/generate-icon.png?raw=true"
+                        alt="generated-sudoku" />
+                </button>
+                <div class="empty-cell">
+                    <label for="empty-cell">Empty Cells : <span id="empty-cell-count">1</span></label>
+                    <p class="min-max">
+                        <span class="min">1</span>
+                        <input type="range" min="1" max="80" id="empty-cell" /><span class="max">80</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
