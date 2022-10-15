@@ -5,7 +5,7 @@ function calc()
     w = parseFloat(document.getElementById("w").value);
     bmi=((w)/(h*h)).toFixed(2);
                 if(bmi <= 18.5){
-                document.getElementById("value").innerHTML ="Underweight";
+                document.getElementById("value").innerHTML ="Underweight ";
                 }
                 else if(bmi>= 18.5 && bmi<=24.8 ){
                     document.getElementById("value").innerHTML ="Normal weight";
