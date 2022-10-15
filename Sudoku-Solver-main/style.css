@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: "Poppins";
+}
+
+.sudoku {
+    display: flex;
+    flex-direction: column;
+}
+
+/* h1 Title */
+h1 {
+    padding: 2rem 0;
+    font-weight: 500;
+    color: hsl(211, 100%, 40%);
+    align-self: flex-end;
+}
+
+/* =============== Popup messages ========= */
+.board-and-messages{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.board-and-messages p{
+    position: absolute;
+    text-align: center;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    padding: 0.25rem 0;
+    background-color: blanchedalmond;
+    font-size: 0.8rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.board-and-messages p{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.25rem;
+}
+
+.board-and-messages p span {
+    display: flex;
+    justify-content: center;
+}
+
+
+.board-and-messages #unsolvable, .board-and-messages #invalid-board {
+    background-color: hsl(0, 100%, 90%);
+    color: hsl(0, 100%, 30%);
+}
+
+/* Unsolvable Message */
+.board-and-messages #unsolvable svg{
+    width: 80%;
+    fill: hsl(0, 100%, 30%);
+}
+/*  */
+
+/* Invalid message */
+.board-and-messages #invalid-board svg{
+    width: 80%;
+    fill: hsl(0, 100%, 30%);
+}
+
+.board-and-messages #invalid-board svg path{
+    width: 80%;
+    fill: hsl(0, 100%, 30%);
+}
+/*  */
+
+/* Solved Message */
+.board-and-messages #solved{
+    background-color: hsl(120, 100%, 90%);
+    color: hsl(120, 100%, 30%);
+    column-gap: 0.25rem;
+}
+
+.board-and-messages #solved svg{
+    width: 80%;
+    fill: hsl(120, 100%, 30%);
+}
+/*  */
+
+/* Solving Message */
+.board-and-messages #solving{
+    background-color: hsl(211, 100%, 95%);
+    color: hsl(211, 100%, 40%);
+    column-gap: 0.25rem;
+}
+
+.board-and-messages #solving svg{
+    width: 80%;
+    fill: hsl(211, 100%, 40%);
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate{
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+/*  */
+
+/* ================== PopUp Messages End ====================== */
+
+/* =========== Canvas layout ====== */
+#canvas-sudoku {
+    width: 90vw;
+    max-width: 600px;
+    background-color: white;
+    outline: 3px solid black;
+    border-radius: 6px;
+}
+/* =========== Canvas layout Ends ====== */
+
+.controls {
+    margin-top: 1rem;
+}
+
+.tools {
+    /* background-color: seagreen; */
+    margin-top: 1rem;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(5, 16%);
+    justify-items: center;
+    justify-content: space-between;
+    column-gap: 0.1rem;
+    row-gap: 0.5rem;
+    padding: 0 1rem;
+}
+
+.tools button {
+    position: relative;
+    max-width: 4rem;
+    width: 15vw;
+    min-width: 3rem;
+    max-height: 4rem;
+    height: 15vw;
+    min-height: 3rem;
+    padding: 0.75rem;
+    border-radius: 50%;
+    grid-row: 1;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.tools label {
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.75rem;
+    align-self: unset;
+}
+
+.tools button img {
+    width: 100%;
+}
+
+.tools button svg {
+    width: 100%;
+}
+
+#notes-activity{
+    position: absolute;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    background-color: rgb(240, 240, 240);
+    font-size: 0.75rem;
+    border: 2px solid white;
+    font-weight: 500;
+    right: 0;
+    bottom: 0;
+    transform: translate(40%,30%);
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* Num inputs */
+.num-inputs{
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+    gap: 0.1rem;
+}
+
+.num-inputs button{
+    width: 100%;
+    padding: 1%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    border-radius: 0.15rem;
+    background-color: hsl(211, 100%, 95%);
+    color: hsl(211, 100%, 40%);
+}
+
+.num-inputs button path{
+    fill: hsl(211, 100%, 40%);
+}
+
+/* Buttons with slider controls */
+.controls {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 0 1rem;
+    gap: 0.25rem;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.controls .solving-controls,
+.controls .generate-controls {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 0.5rem;
+    /* background-color: yellow; */
+}
+.solving-controls,
+.generate-controls {
+    width: 100%;
+}
+
+.solving-controls > label,
+.generate-controls > label {
+    font-weight: 500;
+    font-size: 0.8rem;
+    grid-column: 2;
+    align-self: center;
+}
+
+.solving-controls button,
+.generate-controls button {
+    max-width: 4rem;
+    width: 15vw;
+    min-width: 3rem;
+    max-height: 4rem;
+    height: 15vw;
+    min-height: 3rem;
+    border-radius: 50%;
+    padding: 0.75rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    justify-self: center;
+    grid-row: 1;
+    background-color: rgb(240, 240, 240);
+}
+
+.solving-controls button,
+.generate-controls button {
+    position: relative;
+    max-width: 4rem;
+    width: 15vw;
+    min-width: 3rem;
+    max-height: 4rem;
+    height: 15vw;
+    min-height: 3rem;
+    border-radius: 50%;
+    padding: 0.75rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+    justify-self: center;
+}
+
+
+.solving-controls .speed-control,
+.generate-controls .empty-cell {
+    width: 100%;
+    grid-column: span 2;
+}
+
+.solving-controls button img,
+.generate-controls button img {
+    width: 100%;
+}
+
+.empty-cell p,
+.speed-control p {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    width: 90%;
+}
+
+.empty-cell > label,
+.speed-control > label {
+    font-weight: 400;
+    font-size: 0.75rem;
+    
+}
+
+.empty-cell p input,
+.speed-control p input {
+    grid-row: 1;
+    grid-column: span 2;
+    width: 100%;
+}
+
+.empty-cell p .min,
+.speed-control p .min {
+    font-weight: 400;
+    font-size: 0.75rem;
+    justify-self: start;
+}
+
+.empty-cell p .max,
+.speed-control p .max {
+    font-weight: 400;
+    font-size: 0.75rem;
+    justify-self: end;
+}
+
+#solve-state{
+    position: absolute;
+    padding: 0.20rem 0.35rem;
+    border-radius: 1rem;
+    background-color: hsl(211, 100%, 90%);
+    color: hsl(211, 100%, 40%);
+    font-size: 0.75rem;
+    border: 2px solid white;
+    font-weight: 500;
+    right: 0;
+    bottom: 0;
+    transform: translate(40%,30%);
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+
+
+@media screen and (max-width: 19rem) {
+    /* .tools button {
+        width:3rem;
+        height: 3rem;
+    } */
+
+    .solving-controls button,
+    .generate-controls button {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+
+
+
+
+
+
