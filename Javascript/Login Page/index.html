@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <script src="https://kit.fontawesome.com/59052dbbdd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button class="toggle-btn" onclick="login()">Login</button>
+                <button class="toggle-btn" onclick="register()">Register</button>
+            </div>
+
+            <form id="login" class="input-group">
+                <input type="text" class="input-id" placeholder="Email Id" required>
+                <div class="flex">
+                <input type="password" class="input-id" id="txtPassword" name="txtPassword" placeholder="Enter Password" required>
+                <button type="button" id="btnToggle" class="toggle">
+                    <i id="eyeIcon" class="fa-solid fa-eye"></i>
+                </button>
+            </div>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn bg-gradient-to-r from-cyan-200 to-purple-500">Login</button>
+            </form>
+            <form id="register" class="input-group">
+                <input type="text" class="input-id" placeholder="Name" required>
+                <input type="email" class="input-id" placeholder="Email Id" required>
+                <div class="flex">
+                <input type="password" class="input-id" id="txtPassword1" name="txtPassword1" placeholder="Enter Password" required>
+                <button type="button" id="btnToggle1" class="toggle1">
+                    <i id="eyeIcon1" class="fa-solid fa-eye"></i>
+                </button>
+            </div>
+                <input type="checkbox" class="check-box"><span>I agreed to the terms and conditions</span>
+                <button type="submit"  class="submit-btn bg-gradient-to-r from-cyan-200 to-purple-500">Register</button>
+            </form>
+        </div>
+        <div id="social-media">
+             <a href="https://www.facebook.com/ankit.ranjan.9028" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/ankit_ranjan___/" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/ankit-ranjan-a73b9a228" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/ankitranjan1028" class="github"><i class="fa-brands fa-github"></i></a>
+        </div>
+    </div>
+    <script src="login.js"></script>
+    <script src="register.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

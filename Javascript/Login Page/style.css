@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.hero {
+    background: 
+    repeating-radial-gradient(
+      circle at 0 0, 
+      #eee,
+      #ccc 50px
+    );
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.form-box {
+    width: 380px;
+    height: 475px;
+    position: relative;
+    margin: 6% auto 2% auto;
+    background: #fff;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+.button-box {
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 1px rgb(134, 221, 221);
+    border-radius: 30px;
+}
+
+.toggle-btn {
+    
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    position: relative;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1%);
+    border-radius: 30px;
+    transition: 0.5s;
+
+}
+
+.input-group {
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+
+}
+
+.input-id {
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+
+}
+
+.submit-btn {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    border: 3px solid rgb(79, 25, 205);
+    outline: none;
+    border-radius: 30px;
+}
+
+.check-box {
+    margin: 30px 10px 30px 0;
+}
+
+span {
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+
+}
+@media screen and (max-width: 300px) {
+  .input-group,.submit-btn, input[type=submit] {
+    width: 50%;
+    margin-top: 0;
+  }
+}
+#login {
+    left: 50px;
+}
+
+#register {
+    left: 450px;
+}
+
+#social-media{
+    display: flex;
+    justify-content: center;
+}
+#social-media>a{
+    margin: auto 2%;
+    font-size: 140%;
+    color: rgb(53, 53, 53);
+    transition: 200ms;
+}
+#social-media>a:hover{
+    scale: 120%;
+}
