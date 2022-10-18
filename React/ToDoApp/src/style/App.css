@@ -1,0 +1,42 @@
+header{
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: auto;
+  text-align: center;
+  color: white;
+  background-color: lightslategrey;
+  position: fixed;
+  z-index: 3;
+}
+.btn.pos{
+  float: right;
+  position: relative;
+  top: 10px;
+  right:10px;
+}
+.task-trash{
+  float: right;
+  position: relative;
+  right:10px;
+  color: red;
+}
+
+.container.form{
+  margin-bottom: 10px;
+}
+
+.contenu{
+  padding-top: 100px;
+}
+
+ul li.listTitle{
+  color:white;
+  background-color:rgb(59, 135, 165);
+}
+
+.buttonTrash{
+  float: right;
+  position: relative;
+  top: 10px;
+}
