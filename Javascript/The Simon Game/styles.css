@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(2, 2, 42);
+}
+#level-title{
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+.btn{
+    border: 10px solid black;
+}
+.game-over {
+    background-color: red;
+    opacity: 0.8;
+    text-align: center;
+}
+.pressed {
+    box-shadow: 0 0 20px white;
+    background-color: grey;
+}
+  
+  
