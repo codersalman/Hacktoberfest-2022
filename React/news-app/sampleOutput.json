@@ -1,0 +1,212 @@
+{
+  "status": "ok",
+  "totalResults": 38,
+  "articles": [
+    {
+      "source": { "id": null, "name": "New York Times" },
+      "author": "Andrew Keh",
+      "title": "Figure Skating Will Raise Age Limit to 17 - The New York Times",
+      "description": "The minimum age for elite skaters will be phased in over three years and be in place in time for the 2026 Olympics.",
+      "url": "https://www.nytimes.com/2022/06/07/sports/olympics/figure-skating-age-limit-valieva.html",
+      "urlToImage": "https://static01.nyt.com/images/2022/06/07/multimedia/07skaring-new/07skaring-new-facebookJumbo.jpg",
+      "publishedAt": "2022-06-07T16:06:08Z",
+      "content": "Figure skatings global governing body voted Tuesday to gradually increase the minimum age limit for elite competitors to 17 over the next three years. It characterized the move as an effort to safegu… [+624 chars]"
+    },
+    {
+      "source": { "id": "cnn", "name": "CNN" },
+      "author": "Sandee LaMotte and Virginia Langmaid, CNN",
+      "title": "Overweight people lost 35 to 52 pounds on newly approved diabetes drug, study says - CNN",
+      "description": "A recently approved drug for diabetes that helped users lose weight was also tested on overweight people without diabetes, with \"impressive\" results that rival weight loss surgery, experts say.",
+      "url": "https://www.cnn.com/2022/06/06/health/weight-loss-drug-diabetes-wellness/index.html",
+      "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/220606171038-weight-loss-drug-diabetes-wellness-super-tease.jpg",
+      "publishedAt": "2022-06-07T15:37:00Z",
+      "content": "Sign up for CNN's Eat, But Better: Mediterranean Style. Our eight-part guide shows you a delicious expert-backed eating lifestyle that will boost your health for life. \r\n (CNN)A weekly dose of a medi… [+4317 chars]"
+    },
+    {
+      "source": { "id": "usa-today", "name": "USA Today" },
+      "author": "Laura Daniella Sepulveda, USA TODAY",
+      "title": "Tempe police officers on leave after watching a man drown in lake - USA TODAY",
+      "description": "Sean Bickings begged for help but Arizona officers told him they were not \"jumping in after you,\" according to a transcript of video footage.",
+      "url": "https://www.usatoday.com/story/news/nation/2022/06/06/tempe-arizona-lake-sean-bickings-drowning-police-officers/7539811001/",
+      "urlToImage": "https://www.gannett-cdn.com/presto/2022/06/06/PPHX/27ca7cf3-a21f-4561-99d5-3c354e0e07d7-IMG_0764.JPG?auto=webp&crop=2447,1377,x0,y326&format=pjpg&width=1200",
+      "publishedAt": "2022-06-07T15:33:45Z",
+      "content": "Corrections &amp; clarifications: A previous headline on this story misstated what was shown in the edited police body camera video released to the Arizona Republic of the USA TODAY Network.\r\nPHOENIX… [+3419 chars]"
+    },
+    {
+      "source": { "id": "cnn", "name": "CNN" },
+      "author": "Nathaniel Meyersohn",
+      "title": "Kohl's puts up a for-sale sign - CNN",
+      "description": "Kohl's may soon have a new owner.",
+      "url": "https://www.cnn.com/2022/06/07/business/kohls-franchise-group-offer/index.html",
+      "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/220607085814-01-kohls-store-file-restricted.jpg?c=16x9&q=w_800,c_fill",
+      "publishedAt": "2022-06-07T15:30:00Z",
+      "content": "Kohls may soon have a new owner.\r\nKohls\r\n(KSS) said late Monday that it had entered into a three-week exclusive negotiation period for a potential sale with Franchise Group\r\n(FRG), a holding company … [+1427 chars]"
+    },
+    {
+      "source": {
+        "id": "the-wall-street-journal",
+        "name": "The Wall Street Journal"
+      },
+      "author": "Anna Hirtenstein, Vicky Ge Huang",
+      "title": "Stocks Edge Up Despite Retail Worries - The Wall Street Journal",
+      "description": "The benchmark 10-year Treasury yield is hovering just below 3%",
+      "url": "https://www.wsj.com/articles/global-stocks-markets-dow-update-06-07-2022-11654589931",
+      "urlToImage": "https://images.wsj.net/im-558686/social",
+      "publishedAt": "2022-06-07T14:59:00Z",
+      "content": "U.S. stock indexes ticked higher Tuesday, reversing earlier losses after a profit warning from Target cast a pall over the retail sector. The S&amp;P 500 rose 0.4%, building on Mondays 0.3% gain. The… [+4277 chars]"
+    },
+    {
+      "source": { "id": "ars-technica", "name": "Ars Technica" },
+      "author": "Eric Berger",
+      "title": "NASA and SpaceX stand down on Dragon launch to study hydrazine issue - Ars Technica",
+      "description": "Misplaced hypergols are not something one messes around with.",
+      "url": "https://arstechnica.com/science/2022/06/nasa-delays-cargo-dragon-flight-due-to-a-propellant-issue/",
+      "urlToImage": "https://cdn.arstechnica.net/wp-content/uploads/2022/06/51842830239_a0768f7dc5_k-760x380.jpg",
+      "publishedAt": "2022-06-07T14:54:37Z",
+      "content": "Enlarge/ In January, plumes are seen from the SpaceX Cargo Dragon resupply ship's Draco engines as they fire following its undocking from the International Space Station.\r\n61 with 42 posters particip… [+2145 chars]"
+    },
+    {
+      "source": { "id": "independent", "name": "Independent" },
+      "author": "Andrew Naughtie",
+      "title": "Trump news – live: Proud Boys face new Jan 6 charges as Fox News sidelines riot hearings - The Independent",
+      "description": "Fox News primetime programmes, including Tucker Carlson and Sean Hannity, won’t air full Jan 6 hearing",
+      "url": "https://www.independent.co.uk/news/world/americas/us-politics/donald-trump-news-today-jan-6-hearing-b2095436.html",
+      "urlToImage": "https://static.independent.co.uk/2022/06/05/13/Russia_Ukraine_War_Trump_Impeachment_71126.jpg?quality=75&width=1200&auto=webp",
+      "publishedAt": "2022-06-07T14:35:56Z",
+      "content": "Memphis lawmakers oppose Trump police escort at rally because of his history of unpaid bills\r\nCity council members in Memphis, Tennessee, are calling for the municipal government to decline any reque… [+1022 chars]"
+    },
+    {
+      "source": { "id": null, "name": "The Guardian" },
+      "author": "Andrew Pulver",
+      "title": "Brad Pitt accuses Angelina Jolie of seeking to ‘inflict harm’ on him over vineyard - The Guardian",
+      "description": "Actor alleges that Jolie sold her share in their wine company to a rival investor ‘in secret, knowingly and purposefully violating his contractual rights’",
+      "url": "https://amp.theguardian.com/film/2022/jun/07/brad-pitt-accuses-angelina-jolie-of-seeking-to-inflict-harm-on-him-over-vineyard",
+      "urlToImage": null,
+      "publishedAt": "2022-06-07T14:26:00Z",
+      "content": "FilmActor alleges that Jolie sold her share in their wine company to a rival investor in secret, knowingly and purposefully violating his contractual rights\r\nBrad Pitt has claimed that former wife An… [+1527 chars]"
+    },
+    {
+      "source": { "id": null, "name": "CinemaBlend" },
+      "author": "Corey Chichizola",
+      "title": "Johnny Depp Joins TikTok After Trial With Amber Heard Blew Up There And He Already Has A Huge Number Of Followers - CinemaBlend",
+      "description": "There have been countless TikToks about Johnny Depp's lawsuit against Amber Heard, and now he can watch them himself.",
+      "url": "https://www.cinemablend.com/movies/johnny-depp-joins-tiktok-after-trial-with-amber-heard-blew-up-there-and-he-already-has-a-huge-number-of-followers",
+      "urlToImage": "https://cdn.mos.cms.futurecdn.net/bPpMJdkJMurgEDGVY77nSY-1200-80.jpg",
+      "publishedAt": "2022-06-07T14:21:20Z",
+      "content": "It’s almost hard to believe it, but the long-standing defamation trial between Johnny Depp and Amber Heard has finally found its conclusion. While the Aquaman actress might appeal the decision, the j… [+2471 chars]"
+    },
+    {
+      "source": { "id": null, "name": "New York Times" },
+      "author": "Patricia Cohen",
+      "title": "Global Growth Will Be Choked Amid Inflation and War, Says World Bank - The New York Times",
+      "description": "Global economic growth will be choked as war, inflation and ongoing supply chain problems take a toll.",
+      "url": "https://www.nytimes.com/2022/06/07/business/world-bank-forecast.html",
+      "urlToImage": "https://static01.nyt.com/images/2022/06/07/business/07global-econ/07global-econ-facebookJumbo.jpg",
+      "publishedAt": "2022-06-07T14:18:22Z",
+      "content": "Growth is expected to remain muted in 2023. Growth for the 2020s is expected to fall below the average achieved in the previous decade, the report said.\r\nOther than a handful of oil exporting nations… [+994 chars]"
+    },
+    {
+      "source": { "id": null, "name": "CNET" },
+      "author": "Stephen Shankland",
+      "title": "Apple M2 Chip Gives New MacBook Air 18% Speed Boost - CNET",
+      "description": "Apple maintains its focus on efficiency for its second-generation Mac processor.",
+      "url": "https://www.cnet.com/tech/computing/apple-m2-chip-gives-new-macbook-air-18-speed-boost/",
+      "urlToImage": "https://www.cnet.com/a/img/resize/7a13cb88f879e432faa98e692c425524e2107c47/2022/06/06/6db49279-8828-4a52-b1fa-086aaeefbafa/apple-m2-chip.jpg?auto=webp&fit=crop&height=630&width=1200",
+      "publishedAt": "2022-06-07T14:08:00Z",
+      "content": "This story is part of WWDC 2022, CNET's complete coverage from and about Apple's annual developers conference. \r\nApple on Monday debuted the new M2 processor, a chip that improves core processing per… [+4994 chars]"
+    },
+    {
+      "source": { "id": null, "name": "CBS Sports" },
+      "author": "",
+      "title": "Dustin Johnson resigns PGA Tour membership for LIV Golf: Former world No. 1 unsure about major status - CBS Sports",
+      "description": "Johnson appears content on playing for LIV Golf no matter the consequences elsewhere",
+      "url": "https://www.cbssports.com/golf/news/dustin-johnson-resigns-pga-tour-membership-for-liv-golf-former-world-no-1-unsure-about-major-status/",
+      "urlToImage": "https://sportshub.cbsistatic.com/i/r/2022/06/07/52a4bafb-acc5-4fe0-bae5-0d9d262f6e34/thumbnail/1200x675/3905fae46d9b3a6efa80a1ecdc99c0c6/gettyimages-1401514033-1.jpg",
+      "publishedAt": "2022-06-07T14:08:00Z",
+      "content": "Dustin Johnson became the latest player to officially resign from his membership on the PGA Tour on Tuesday. Johnson's decision is more surprising than that made by others -- Kevin Na, Louis Oosthuiz… [+2216 chars]"
+    },
+    {
+      "source": { "id": null, "name": "CNBC" },
+      "author": "Natasha Turak",
+      "title": "Ukraine retakes parts of Severodonetsk amid brutal street fighting; World Bank slashes global growth forecast - CNBC",
+      "description": "Brutal street fighting continues in Ukraine's east, particularly in the cities of Sievierodonetsk and Lysychansk.",
+      "url": "https://www.cnbc.com/2022/06/07/russia-ukraine-live-updates.html",
+      "urlToImage": "https://image.cnbcfm.com/api/v1/image/107064563-1653063673849-gettyimages-1240788796-AFP_32AL4R8.jpeg?v=1653063794&w=1920&h=1080",
+      "publishedAt": "2022-06-07T14:07:00Z",
+      "content": "Ukraine cannot be pressured by other countries into accepting a bad peace deal with Russia, U.K. Prime Minister Boris Johnson said during a meeting with his cabinet.\r\nJohnson \"said it was vital that … [+919 chars]"
+    },
+    {
+      "source": {
+        "id": "the-wall-street-journal",
+        "name": "The Wall Street Journal"
+      },
+      "author": "Daniel Michaels",
+      "title": "In Russia’s Battle for East Ukraine, Both Sides Have Higher Stakes at Play - The Wall Street Journal",
+      "description": "Moscow aims to prove it can gain and retain territory, while Ukraine wants to show some wary Western allies that it has a chance of prevailing against bigger Russian forces.",
+      "url": "https://www.wsj.com/articles/in-russias-battle-for-east-ukraine-both-sides-have-higher-stakes-at-play-11654606965",
+      "urlToImage": "https://images.wsj.net/im-558337/social",
+      "publishedAt": "2022-06-07T13:52:00Z",
+      "content": "Russias strategy for seizing territory in Ukraines Donbas region carries implications far beyond the battlefield.\r\nOver the past month, Moscows troops have pushed to expand and consolidate areas they… [+364 chars]"
+    },
+    {
+      "source": { "id": null, "name": "CNBC" },
+      "author": "Todd Haselton",
+      "title": "Apple's next iPhone may get a feature Android phones have had for years - CNBC",
+      "description": "Apple's new iOS 16 software suggests the company may be planning an always-on display for the iPhone 14.",
+      "url": "https://www.cnbc.com/2022/06/07/apple-iphone-14-may-get-always-on-display-new-software-hints.html",
+      "urlToImage": "https://image.cnbcfm.com/api/v1/image/107071656-1654537409110-Screen_Shot_2022-06-06_at_14301_PM.png?v=1654537441&w=1920&h=1080",
+      "publishedAt": "2022-06-07T13:42:14Z",
+      "content": "Apple announced its new iPhone software, iOS 16, during its developers conference on Monday. The new lock screen customization options suggest that at least one of this year's new iPhones will get a … [+1695 chars]"
+    },
+    {
+      "source": { "id": "cnn", "name": "CNN" },
+      "author": "Amanda Musa, Jason Hanna",
+      "title": "Teacher shot in Uvalde massacre recalls horror inside classroom where 11 students were killed - CNN",
+      "description": "A teacher who was wounded in last month's massacre at a Texas elementary school tells ABC his students were watching a movie when they heard gunshots -- and they asked him what was going on.",
+      "url": "https://www.cnn.com/2022/06/07/us/uvalde-school-teacher-arnulfo-reyes-interview/index.html",
+      "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/220607113159-arnulfo-reyes-abc.jpg?c=16x9&q=w_800,c_fill",
+      "publishedAt": "2022-06-07T13:42:00Z",
+      "content": "A teacher who was wounded in last months massacre at a Texas elementary school told ABC his students were watching a movie when they heard gunshots and asked him what was going on.\r\nEleven students w… [+1982 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Euronews" },
+      "author": "Nicole Lin Chang",
+      "title": "This breakthrough drug trial saw cancer vanish in every patient - Euronews",
+      "description": "The cancer patients saw their tumours disappear after the treatment, and have been cancer-free for two years.",
+      "url": "https://www.euronews.com/next/2022/06/07/this-breakthrough-drug-trial-saw-cancer-vanish-in-every-patient",
+      "urlToImage": "https://static.euronews.com/articles/stories/06/76/04/30/1000x563_cmsv2_7d5ebdda-6c77-52a6-9ef7-d2a29016b746-6760430.jpg",
+      "publishedAt": "2022-06-07T13:34:37Z",
+      "content": "More than a dozen rectal cancer patients in the United States have seen their cancer disappear after undergoing experimental immunotherapy, in what doctors are calling an astonishing result.\r\nThe pat… [+4693 chars]"
+    },
+    {
+      "source": { "id": null, "name": "CNBC" },
+      "author": "Jim Cramer",
+      "title": "Cramer Tuesday: Target's profit warning, Apple's 'innovation engine' - CNBC",
+      "description": "Stocks were down Tuesday morning following Target's profit warning, but the retailer was right to take decision action to clear out surplus inventory.",
+      "url": "https://www.cnbc.com/2022/06/07/cramer-tuesday-targets-profit-warning-apples-innovation-engine.html",
+      "urlToImage": "https://image.cnbcfm.com/api/v1/image/107063772-1652964225149-gettyimages-1240754457-AFP_32AF69T.jpeg?v=1652964253&w=1920&h=1080",
+      "publishedAt": "2022-06-07T13:25:37Z",
+      "content": null
+    },
+    {
+      "source": { "id": "associated-press", "name": "Associated Press" },
+      "author": "Ben Fox",
+      "title": "US sees heightened extremist threat heading into midterms - The Associated Press",
+      "description": "WASHINGTON (AP) — A looming Supreme Court decision on abortion , an increase of migrants at the U.S.-Mexico border  and the midterm elections  are potential triggers for extremist violence over the next six months, the Department of Homeland Security said Tue…",
+      "url": "https://apnews.com/f0db5be3931d14a5cd5da3bdc200e930",
+      "urlToImage": "https://storage.googleapis.com/afs-prod/media/faf4424959394dc0a1c98a8c4c3c2371/3000.jpeg",
+      "publishedAt": "2022-06-07T13:17:36Z",
+      "content": "WASHINGTON (AP) A looming Supreme Court decision on abortion, an increase of migrants at the U.S.-Mexico border and the midterm elections are potential triggers for extremist violence over the next s… [+2945 chars]"
+    },
+    {
+      "source": { "id": "fox-news", "name": "Fox News" },
+      "author": "Audrey Conklin",
+      "title": "San Francisco DA Chesa Boudin awaits fate as recall election vote comes to a close - Fox News",
+      "description": "San Francisco residents will vote to recall or keep District Attorney Chesa Boudin on Tuesday. Critics of the DA say he has made the city less safe.",
+      "url": "https://www.foxnews.com/us/san-francisco-chesa-boudin-recall-election-vote-closing",
+      "urlToImage": "https://static.foxnews.com/foxnews.com/content/uploads/2022/01/GettyImages-1321189152-1.jpg",
+      "publishedAt": "2022-06-07T13:05:31Z",
+      "content": "San Francisco residents on Tuesday will vote to either keep or recall District Attorney Chesa Boudin, whose progressive policies have shocked even his early supporters, recall campaign spokesperson R… [+4697 chars]"
+    }
+  ]
+}
