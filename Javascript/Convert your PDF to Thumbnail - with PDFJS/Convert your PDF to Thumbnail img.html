@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert your PDF to THUMBNAIL</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <style>
+        #pdfThumbnailImg {
+            max-width: 250px;
+            border: 2px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Convert your PDF to Thumbnail</h1>
+    <p>Select pdf file, you will get a image of first page of PDF.</p>
+    <input type="file" id="myPdf" /><br>
+    <canvas id="pdfViewer"></canvas>
+    <p>Thumbnail image of PDF (1st page of pdf) :</p>
+    <img src="" id="pdfThumbnailImg">
+    <script>
+        // Loaded via <script> tag, create shortcut to access PDF.js exports.
+        var pdfjsLib = window['pdfjs-dist/build/pdf'];
+        // The workerSrc property shall be specified.
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://mozilla.github.io/pdf.js/build/pdf.worker.js';
+
+        $("#myPdf").on("change", function (e) {
+            var file = e.target.files[0]
+            if (file.type == "application/pdf") {
+                var fileReader = new FileReader();
+                fileReader.onload = function () {
+                    var pdfData = new Uint8Array(this.result);
+                    // Using DocumentInitParameters object to load binary data.
+                    var loadingTask = pdfjsLib.getDocument({ data: pdfData });
+                    loadingTask.promise.then(function (pdf) {
+
+                        // Fetch the first page
+                        var pageNumber = 1;
+                        pdf.getPage(pageNumber).then(function (page) {
+
+                            var scale = 1;
+                            var viewport = page.getViewport({ scale: scale });
+
+                            // Prepare canvas using PDF page dimensions
+                            //var canvas = $("#pdfViewer")[0];
+                            var canvas = document.createElement('canvas');
+                            var context = canvas.getContext('2d');
+                            canvas.height = viewport.height;
+                            canvas.width = viewport.width;
+
+                            // Render PDF page into canvas context
+                            var renderContext = {
+                                canvasContext: context,
+                                viewport: viewport
+                            };
+
+                            var renderTask = page.render(renderContext);
+                            renderTask.promise.then(function () {
+                                //console.log('Page rendered');
+                                var thumbnailPDF = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+                                //console.log(thumbnailPDF)
+                                pdfThumbnailImg.src = thumbnailPDF;
+                            });
+                        });
+
+                    }, function (reason) {
+                        // PDF loading error
+                        console.error(reason);
+                    });
+                };
+                fileReader.readAsArrayBuffer(file);
+            }
+        });
+
+
+
+        // option 2 by file url
+        function thumbnailPDF(pdfURL) {
+            var loadingTask = pdfjsLib.getDocument(pdfURL);
+            loadingTask.promise.then(
+                function (pdf) {
+                    // Load information from the first page.
+                    // Fetch the first page
+                    var pageNumber = 1;
+                    pdf.getPage(pageNumber).then(function (page) {
+
+                        var scale = 1;
+                        var viewport = page.getViewport({ scale: scale });
+
+                        // Prepare canvas using PDF page dimensions
+                        //var canvas = $("#pdfViewer")[0];
+                        var canvas = document.createElement('canvas');
+                        var context = canvas.getContext('2d');
+                        canvas.height = viewport.height;
+                        canvas.width = viewport.width;
+
+                        // Render PDF page into canvas context
+                        var renderContext = {
+                            canvasContext: context,
+                            viewport: viewport
+                        };
+
+                        var renderTask = page.render(renderContext);
+                        renderTask.promise.then(function () {
+                            //console.log('Page rendered');
+                            var thumbnailPDF = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+                            console.log(thumbnailPDF)
+                            $('#input_pdf_thumbnail img').attr("src", thumbnailPDF);
+                        });
+                    });
+                },
+                function (reason) {
+                    console.error(reason);
+                }
+            );
+
+        }
+    </script>
+</body>
+
+</html>

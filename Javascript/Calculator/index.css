@@ -36,6 +36,7 @@ h1{
 .button:hover{
     background-color: #C3B1E1;
     color: black;
+    border: 2px solid lightslategray;
 }
 .row{
     text-align: center;
@@ -63,6 +64,7 @@ h1{
 }
 .row1 .button:hover{
     background-color: #C3B1E1;
+    border: 2px solid #008080;
 }
 .buttons{
     width: 60px;

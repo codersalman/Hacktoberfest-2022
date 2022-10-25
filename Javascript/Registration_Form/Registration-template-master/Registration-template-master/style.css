@@ -33,7 +33,7 @@ p {
   margin-bottom: 10px;
 }
 
-.contact-form input {
+.contact-form input,select {
   padding: 12px 20px;
   outline: none;
   border: none;

@@ -1,0 +1,88 @@
+h1 {
+    text-align: center;
+    border-bottom:3px solid gold;
+}
+
+body {
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* background-color: lightcoral; */
+    background-color: rgb(215, 211, 211);
+    background-color:#333;
+}
+
+.container {
+    width: 600px;
+    height: 450px;
+    margin: auto;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    box-shadow: aquamarine 0px 22px 70px 15px;
+}
+
+.box {
+    width: 490px;
+    height: 250px;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+#new {
+    width: 100px;
+    margin-top:10px;
+    height: 35px;
+    margin-top:-10px;
+    border-radius:50px;
+    font-weight: bold;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    border:1px solid black;
+    background-image: linear-gradient(45deg, #85FFBD 30%, #FBAB7E 70%);
+}
+
+#new:hover{
+    background-image: linear-gradient(45deg, #FBAB7E 30%,  #85FFBD 70%);
+}
+
+#author{
+    color:brown;
+    font-weight: bold;
+}
+
+#here {
+    overflow-wrap: break-word;
+}
+
+#image img {
+    background-color: rgb(199, 224, 232);
+    border: 1px solid lightgreen;
+    border-radius: 50px;
+}
+
+#image img:hover {
+    background-color: white;
+    animation-name: to_rot;
+    animation-duration: 1s;
+}
+
+@keyframes to_rot {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+

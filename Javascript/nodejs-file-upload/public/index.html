@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoderDost Image Upload</title>
+</head>
+<body>
+    <h1> Image Upload</h1>
+
+    <form action="/image" method="post" enctype="multipart/form-data">
+        <input type="text" name="fullname" id="">
+        <input type="file" name="avatar" id="image">
+        <input type="submit" value="Upload Image">
+    </form>
+
+    <h1> Image Upload By JavaScript</h1>
+
+        <input type="text" name="fullname" id="fullName">
+        <input type="file" name="avatar" id="avatar">
+    
+    
+</body>
+<script>
+    document.getElementById('avatar').onchange = function(e){
+        fileUpload(e);
+    }
+    function fileUpload(e){
+        // this method you can use with any JS frontend library
+       let formData = new FormData();
+       formData.append('avatar',e.target.files[0]);
+       // this first arg is == 'name' attribute
+       formData.append('fullname',document.getElementById('fullName').value);
+       fetch('/image',{
+        method:'POST',
+        body: formData
+       }).then(response=>{
+        console.log(response)
+       })
+    }
+
+</script>
+</html>
