@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<style>
+
+    html, body {
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+#game {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+</style>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rocket Game by Solvi</title>
+
+</head>
+
+<body>
+
+    <canvas id="game"></canvas>
+
+    <script>
+
+        // global variables
+
+let intervalObj = canvas = ctx = image = null,
+
+    rocketImageX = rocketImageY = 0,
+
+    interval = startInterval = 1200,
+
+    hits = miss = 0,
+
+    level = 1,
+
+    maxHit = maxMiss = 5
+
+const Helpers = {
+
+    randomInt: (from, to) => {
+
+        return Math.floor(Math.random() * (to - from)) + from;
+
+    }
+
+}
+
+const Scene = {
+
+    drawStartScreen: () => {
+
+        // clear onclick event
+
+        canvas.onclick = () => {}
+
+        // clear interval
+
+        clearInterval(intervalObj)
+
+        // clear canvas
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+        // draw start header text
+
+        ctx.font = "30px Arial"
+
+        ctx.fillText(`JS ROCKETS`, Math.round(window.innerWidth / 2 - 90), Math.round(window.innerHeight / 2 - 60))
+
+        // draw start subheader text
+
+        ctx.font = "20px Arial"
+
+        ctx.fillText(`Catch them all`, Math.round(window.innerWidth / 2 - 60), Math.round(window.innerHeight / 2 - 20))
+
+        // draw start button
+
+        Scene.drawStartButton()
+
+    },
+
+    drawStartButton: () => {
+
+        // draw start button rect
+
+        ctx.rect(Math.round(window.innerWidth / 2 - 70), Math.round(window.innerHeight / 2 + 20), 140, 40)
+
+        ctx.lineWidth = 2;
+
+        ctx.strokeStyle = "#000000"
+
+        ctx.fill();
+
+        // draw start button text
+
+        ctx.font = "18px Arial"
+
+        ctx.fillStyle = "#ffffff"
+
+        ctx.fillText("Let's GO 🚀", Math.round(window.innerWidth / 2 - 42), Math.round(window.innerHeight / 2 + 48))
+
+        // update onclick event
+
+        setTimeout(() => {
+
+            canvas.onclick = Game.start
+
+        }, 800)
+
+    },
+
+    drawRestartButton: () => {
+
+        // draw restart button rect
+
+        ctx.rect(Math.round(window.innerWidth / 2 - 50), Math.round(window.innerHeight / 2 + 20), 120, 40)
+
+        ctx.lineWidth = 2;
+
+        ctx.strokeStyle = "#000000"
+
+        ctx.fill();
+
+        // draw restart button text
+
+        ctx.font = "18px Arial"
+
+        ctx.fillStyle = "#ffffff"
+
+        ctx.fillText("Restart 🚀", Math.round(window.innerWidth / 2 - 30), Math.round(window.innerHeight / 2 + 48))
+
+        // update onclick event
+
+        setTimeout(() => {
+
+            canvas.onclick = Game.restart
+
+        }, 800)
+
+    },
+
+    drawNextLevelButton: () => {
+
+        // if current level is max then draw restart button
+
+        if (Game.isMaxLevel()) {
+
+            Scene.drawRestartButton()
+
+            return
+
+        }
+
+        // else if current level can up
+
+        // draw next level button rect
+
+        ctx.rect(Math.round(window.innerWidth / 2 - 60), Math.round(window.innerHeight / 2 + 20), 140, 40)
+
+        ctx.lineWidth = 2;
+
+        ctx.strokeStyle = "#000000"
+
+        ctx.fill();
+
+        // draw next level button text
+
+        ctx.font = "18px Arial"
+
+        ctx.fillStyle = "#ffffff"
+
+        ctx.fillText("Start 🚀", Math.round(window.innerWidth / 2 - 20), Math.round(window.innerHeight / 2 + 48))
+
+        // update onclick event
+
+        setTimeout(() => {
+
+            canvas.onclick = Game.nextLevel
+
+        }, 800)
+
+    },
+
+    drawRocketAndHits: () => {
+
+        // clear canvas
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+        // draw rocket image and hits on canvas
+
+        Rocket.draw()
+
+        ctx.fillStyle = "#eee"
+
+        ctx.fillRect(0, 0, window.innerWidth, 50)
+
+        ctx.fillStyle = "#000"
+
+        ctx.font = "14px Arial"
+
+        ctx.fillText("Tap me", rocketImageX-10, rocketImageY+44)
+
+        ctx.font = "18px Arial"
+
+        ctx.fillText(`🎯 ${hits} / ${maxHit} hits      🔘 ${miss} / ${maxMiss} miss       LVL: ${level}`, 20, 30)
+
+    },
+
+    drawWinScreen: () => {
+
+        // clear onclick event
+
+        canvas.onclick = () => {}
+
+        // clear interval
+
+        clearInterval(intervalObj)
+
+        // clear canvas
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+        // draw win header text
+
+        ctx.font = "30px Arial"
+
+        ctx.fillText(`🎉 WIN 🎉`, Math.round(window.innerWidth / 2 - 54), Math.round(window.innerHeight / 2 - 60))
+
+        // draw win subheader text
+
+        ctx.font = "20px Arial"
+
+        ctx.fillText(`Next level: ${level + 1}`, Math.round(window.innerWidth / 2 - 50), Math.round(window.innerHeight / 2 - 20))
+
+        // draw next level button
+
+        Scene.drawNextLevelButton()
+
+    },
+
+    drawGameOverScreen: () => {
+
+        // clear onclick event
+
+        canvas.onclick = () => {}
+
+        // clear interval
+
+        clearInterval(intervalObj)
+
+        // clear canvas
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+        // draw game over header text
+
+        ctx.font = "30px Arial"
+
+        ctx.fillText(`😱 GAME OVER 😱`, Math.round(window.innerWidth / 2 - 120), Math.round(window.innerHeight / 2 - 60))
+
+        // draw game over subheader text
+
+        ctx.font = "20px Arial"
+
+        ctx.fillText(`You have reached level ${level}`, Math.round(window.innerWidth / 2 - 100), Math.round(window.innerHeight / 2 - 20))
+
+        // draw restart button and update event for restart
+
+        Scene.drawRestartButton()
+
+    }
+
+}
+
+const Rocket = {
+
+    hasHitCollision: (e) => {
+
+        const hitX = e.clientX >= rocketImageX && e.clientX <= (rocketImageX + 30)
+
+        const hitY = e.clientY >= rocketImageY && e.clientY <= (rocketImageY + 30)
+
+        return hitX && hitY
+
+    },
+
+    draw: () => {
+
+        ctx.drawImage(image, rocketImageX, rocketImageY)
+
+    },
+
+    drawInRandomPosition: () => {
+
+        // get random image position
+
+        rocketImageX = Helpers.randomInt(10, Math.round(canvas.width - 30))
+
+        rocketImageY = Helpers.randomInt(70, Math.round(canvas.height - 80))
+
+        // draw image and hits on canvas
+
+        Scene.drawRocketAndHits()
+
+        // update interval
+
+        clearInterval(intervalObj)
+
+        intervalObj = setInterval(Rocket.drawInRandomPosition, interval)
+
+    }
+
+}
+
+const Game = {
+
+    init: () => {
+
+        Game.resetVariables()
+
+        Game.prepareCanvas()
+
+    },
+
+    prepareCanvas: () => {
+
+        canvas.width = window.innerWidth
+
+        canvas.height = window.innerHeight
+
+        canvas.onclick = Game.onCanvasClick
+
+        ctx.imageSmoothingEnabled = false
+
+    },
+
+    resetVariables: () => {
+
+        hits = miss = 0
+
+    },
+
+    start: () => {
+
+        Game.init()
+
+        Rocket.drawInRandomPosition()
+
+    },
+
+    restart: () => {
+
+        level = 1
+
+        interval = startInterval
+
+        Game.start()
+
+    },
+
+    nextLevel: () => {
+
+        level += 1
+
+        interval -= 500 / level
+
+        Game.start()
+
+    },
+
+    isMaxLevel: () => {
+
+        return level === 15
+
+    },
+
+    onCanvasClick: (e) => {
+
+        if (Rocket.hasHitCollision(e))
+
+            Game.hit()
+
+        else
+
+            Game.miss()
+
+    },
+
+    hit: () => {
+
+        hits += 1
+
+        if (hits >= maxHit || interval <= 100)
+
+            Scene.drawWinScreen()
+
+        else
+
+            Rocket.drawInRandomPosition()
+
+    },
+
+    miss: () => {
+
+        miss += 1
+
+        if (miss >= maxMiss || interval <= 100)
+
+            Scene.drawGameOverScreen()
+
+        else
+
+            Scene.drawRocketAndHits()
+
+    }
+
+}
+
+// start app when window was loaded
+
+window.onload = () => {
+
+    // get canvas with context
+
+    canvas = document.getElementById("game")
+
+    ctx = canvas.getContext("2d")
+
+    // create rocket image
+
+    image = new Image()
+
+    image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAYAAAAfrhY5AAAC8UlEQVRIS72WS2gTQRjHv53dLCZYEIqCpAYvPVbE4rNUI57MwUehIhbUInjQk4XeBW+ilV7Emw/w0YOICHrx1AS1rdraWhRE1DTRg6JNDqkkbsaZsbPu7Mw+ko3OZUlm5vv9/983Lw3+Q8PptAHJZE1A1SzQ/hX7U6mKU6cG1eGrFkCu2Fo4BbppkgDiGLJFNqwlzlVQpwhbwLJj3hcJni/X7mKM+8KULnXyGMB4QRjaNDzIrZNSJ8X4XkOwacPuv38jeN8UvBkwp3IB2pes1jDcD7wjc4Yxnjy8xL7csbssVEAgHA8MkKUJiE/OX76qLC+HOjuprfv3Rj2XQ/dqQ+2cQKUt4wU+N3ILHj2eYpCvo2n2XTM8DoXpZ/Di3VMl3ERwuKvdGBPSTqBlMrpNNSPINQfrWIP2fBwKJ86yMCoB1DXts+Eqt0Hppv085RS+sh6DxEKMTQsN9wPTQF6unXBaJzSUEcAjV87Drj29QiK5a9t5s6551PS+IfjwakKqll/KGTyKa077VkXQ3bldgAeB/8D7++NgmhXVIuv4uAp0XYfsgwvKVWuRXP8gJ1fY5ky5sODcAZI9p+3tpuuICLgoMajjsM0N9oQ7wTy4MwNRHfOYyuNVBacTeAaiOvaFV4qD6zoPJfLulJrkbFiYfw4Tb3Khsq1KtXOi0jkuD7J6d+xN2GPpQVx4Pcl+G4YeKIBfHn4qJTgH00n0VkplEtBm/oS307NCHC8Bzjub3lyh4bh0dAtounBaYKIArZ9XxnAKiC2WoGvnAWFcY/DldPMIFnlzaXM3WAZifZuVAnB8hae5puF1qw4wc10IrB8UBUQBS/uc1xtXK4DnxiRHGMWWjP0b46xjccrAa3t/edkOci3AbbBVBTxzU4qJ0oDIihceGQQuPTpY0ICFJu1zCse1JcCzdySwTp5cKoetg5eOb6u/vMbePZqZmEQ9la1+24T2qeBhXUs1D4K5+wlceGA2Ao4Mt91r+Ij2OXe7UfG/AemERl54ZddcAAAAAElFTkSuQmCC"
+
+    // start game when image was loaded
+
+    image.onload = () => {
+
+        Game.init()
+
+        Scene.drawStartScreen()
+
+    }
+
+}
+
+    </script>
+
+</body>
+
+</html>
+
