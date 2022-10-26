@@ -1,0 +1,61 @@
+#basket{
+
+ position: absolute;
+
+ left: 125px;
+
+ top: 310px;
+
+}
+
+#box{
+
+    width: 300px;
+
+    height: 400px;
+
+    border: 3px solid rgb(168, 2, 2);
+
+    position: relative;
+
+}
+
+.btn{
+
+    width: 50px;
+
+    background-color: rgb(87, 192, 87);
+
+    padding: 5px;
+
+    margin: 5px;
+
+    margin-left: 30px;
+
+    margin-right: 30px;
+
+}
+
+#grass{
+
+    position: absolute;
+
+    top: 350px;
+
+}
+
+.egg{
+
+    top: 10px;
+
+    position: absolute;
+
+}
+
+.eggimg{
+
+    width: 20px;
+
+    height: 25px;
+
+}
