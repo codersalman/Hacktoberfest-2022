@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+  
+Client-side storage options:
+
+localStorage: Firefox 2+, Chrome 4+, Safari 4+, Internet Explorer 8+. 5 MB per domain without user confirmation (but be aware that it is stored as UTF-16 so you may use two bytes per character).
+  
+  
+<textarea id="result" style="width:100%; min-height:260px;" >Enter text here...</textarea>
+
+<script>
+
+if (typeof(Storage) !== "undefined") {
+  restore();  
+} else {
+  alert("Sorry, your browser does not support Web Storage...");
+}
+
+function autoSave(){
+	localStorage.setItem("htmlData", document.getElementById("result").value);
+  // localStorage.htmlData =  document.getElementById("result").value;
+}
+
+function restore(){
+	var restoreData = localStorage.getItem("htmlData");
+  //var restoreData = localStorage.htmlData;
+    if(restoreData){
+      if (confirm('Want to Restore Your Last Session ?')) {
+        document.getElementById("result").value = restoreData;        
+      } else {
+       // do nothing
+      }		
+    }
+    setInterval(function(){ autoSave(); }, 3000);    
+}
+</script>
+
+</body>
+</html>
