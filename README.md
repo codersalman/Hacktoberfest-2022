@@ -15,7 +15,7 @@ This is a repository for anyone wishing to contribute to HacktoberFest 2022
 | Android / Flutter | /Android OR Flutter            | `Anddroid/Flutter` | Projects, Learning Resources, App Templates,etc.       |
 | Devtools          | [dev-tools.md](./dev-tools.md) | `devtools`         | Chrome Extentions, iOS or Android Apps, Mac, Web tools |
 | PHP               | /PHP                           | `PHP`              | PHP Projects, Learning Resources, etc.                 |
-| Javascript        | /Javascript                    | `Javascript`       | Projects, Learning Resources, Libraries etc.           |
+| JavaScript        | /JavaScript                    | `JavaScript`       | Projects, Learning Resources, Libraries etc.           |
 | Arduino / IOT     | /Arduino                       | `IOT/Arduino`      | Projects, Learning Resources, Libraries etc.           |
 | Google AppScript  | /Appscript                     | `Appscript`        | Projects, Learning Resources, etc.                     |
 | ReactJS / NextJS  | /React                         | `React`            | Projects, Learning Resources, etc.                     |
@@ -41,7 +41,7 @@ This repository is open to `all members` of the `GitHub community`. Any member m
 
 While we accept data structures and algorithms codes (just like other repos) we will give high `appreciation` to Pull Requests involving pure `DEV` fields mentioned above !
 
-All `valid PRs` will be merged or suitable tags like hacktober-accepted will be given while spam PRs will be given spam label which will affect your participation in hactoberfest
+All `valid PRs` will be merged and suitable tags like hacktober-accepted will be given while spam PRs will be given spam label which will affect your participation in hactoberfest
 
 Keep `patience` we will try to cover as many PRs and reduce possible delays
 
