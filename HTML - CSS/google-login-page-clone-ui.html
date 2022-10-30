@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clone of google login page</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto";
+}
+a {
+  text-decoration: none;
+  color: #1a73e8;
+  display: block;
+  font-size: 14px;
+}
+.container {
+  max-width: 450px;
+  border: 1px solid rgb(228, 228, 228);
+  margin: auto;
+  margin-top: 4rem;
+  border-radius: 10px;
+  padding: 2rem;
+  height: 500px;
+  /* text-align: center; */
+}
+.top-content {
+  text-align: center;
+}
+img {
+  width: 80px;
+  margin: 10px 0;
+}
+h2 {
+  font-size: 20px;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+.heading {
+  margin-bottom: 30px;
+}
+input[type="email"] {
+  display: block;
+  border: 1px solid rgb(228, 228, 228);
+  font-size: 16px;
+  width: 100%;
+  height: 55px;
+  padding: 0 15px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+  background-color: transparent;
+  outline: none;
+  border-radius: 5px;
+  position: relative;
+}
+.inputs {
+  position: relative;
+}
+.input-label {
+  position: absolute;
+  top: 15px;
+  font-size: 1.1rem;
+  left: 14px;
+  color: rgb(122, 122, 122);
+  font-weight: 100;
+  transition: 0.1s ease;
+  background-color: white;
+  padding: 0 5px;
+}
+
+input[type="email"]:focus ~ .input-label {
+  top: -7px;
+  color: #1864c9;
+  font-size: 13px;
+  background-color: rgb(255, 255, 255);
+  z-index: 2;
+}
+input[type="email"]:target ~ .input-label {
+  top: -7px;
+  color: #1864c9;
+  font-size: 13px;
+  background-color: rgb(255, 255, 255);
+  z-index: 2;
+}
+.input:focus {
+  border: 2px solid #1a73e8;
+}
+.link-btn {
+  margin-bottom: 2rem;
+}
+.color {
+  color: rgb(90, 90, 90);
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+}
+.create-btn {
+  border: none;
+  background-color: transparent;
+  color: #1a73e8;
+  font-weight: bold;
+  cursor: pointer;
+  height: 35px;
+  padding: 10px 5px;
+}
+.next-btn {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  height: 38px;
+  padding: 0 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.create-btn:hover {
+  background-color: #e8f2ff6e;
+  /* transition: 0.2s all ease-in; */
+}
+.next-btn:hover {
+  background-color: #1864c9;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-content">
+          <img src="https://i.postimg.cc/CL7CmGSx/google-logo-png-29530.png" alt="">
+          <h2>Sign in</h2>
+          <p class="heading">Use your Google Account</p>
+      
+        </div>
+        <div class="inputs">
+          <input type="email" name="" id="email" class="input">
+          <label for="email" class="input-label">Email or phone</label>
+      
+        </div>
+        <a href="" class="link-btn">Forgot Email?</a>
+        <p class="color">Not your computer? Use Guest mode to sign in privately.</p>
+        <a href="" class="link-btn">Learn More</a>
+        <div class="btn-group">
+          <button class="create-btn">Create account</button>
+          <button class="next-btn">Next</button>
+      
+        </div>
+      </div>
+</body>
+</html>
